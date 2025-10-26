@@ -9,8 +9,8 @@ localPort = 5000
 externalPort = 80
 
 [[ports]]
-localPort = 41833
-externalPort = 3000
+localPort = 5001
+externalPort = 3002
 
 [[ports]]
 localPort = 46105
@@ -82,3 +82,6 @@ waitForPort = 5000
 
 [agent]
 expertMode = true
+
+[deployment]
+deploymentTarget = "cloudrun"
