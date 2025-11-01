@@ -1,5 +1,5 @@
-import api, { endpoints } from "./index";
-import { Student, Teacher, Assignment, Class } from "../types";
+import api, { endpoints } from './index';
+import { Student, Teacher, Assignment, Class } from '../types';
 
 class ApiService {
   async getStudentsPaged(params: {
@@ -28,10 +28,7 @@ class ApiService {
   }
 
   async createStudent(payload: any): Promise<any> {
-    const res = await api.post(endpoints.users.base, {
-      ...payload,
-      type: "STUDENT",
-    });
+    const res = await api.post(endpoints.users.base, { ...payload, type: 'STUDENT' });
     return res.data;
   }
 
@@ -45,17 +42,12 @@ class ApiService {
   }
 
   async getTeachers(accountId?: string): Promise<Teacher[]> {
-    const res = await api.get(`${endpoints.users.getAllByType}/${accountId}`, {
-      params: { type: "TEACHER", accountId },
-    });
+    const res = await api.get(endpoints.users.getAllByType, { params: { type: 'TEACHER', accountId } });
     return res.data?.data || res.data || [];
   }
 
   async createTeacher(payload: any): Promise<any> {
-    const res = await api.post(endpoints.users.base, {
-      ...payload,
-      type: "TEACHER",
-    });
+    const res = await api.post(endpoints.users.base, { ...payload, type: 'TEACHER' });
     return res.data;
   }
 
@@ -88,16 +80,12 @@ class ApiService {
   }
 
   async getClassById(id: string): Promise<Class> {
-    const res = await api.get(`${endpoints.schools.classes.getAll}`, {
-      params: { id },
-    });
+    const res = await api.get(`${endpoints.schools.classes.getAll}`, { params: { id } });
     return res.data?.data || res.data;
   }
 
   async getTimetableBy(accountId?: string, classId?: string): Promise<any> {
-    const res = await api.get(endpoints.timetable.base, {
-      params: { accountId, classId },
-    });
+    const res = await api.get(endpoints.timetable.base, { params: { accountId, classId } });
     return res.data?.data || res.data;
   }
 
