@@ -169,19 +169,6 @@ export const ReusableForm: React.FC<ReusableFormProps> = ({
               )}
             </View>
           ))}
-            {showSCDSelector && (
-          <SCDSelectorNative
-            formik={{
-              values: formData,
-              setFieldValue: (field: string, value: any) =>
-                handleInputChange(field, value),
-              // ReusableForm tracks validation errors in `errors`. We don't currently track `touched` per-field,
-              // so provide an empty object; SCDSelector checks touched before showing error messages.
-              touched: {},
-              errors: errors || {},
-            }}
-          />
-        )}
           <Button
             mode="contained"
             onPress={handleSubmit}
@@ -205,7 +192,14 @@ export const ReusableForm: React.FC<ReusableFormProps> = ({
                 </Button>
               )}
         </Card.Content>
-      
+        {showSCDSelector && (
+          <SCDSelectorNative
+            schoolId={formData.schoolId}
+            classId={formData.classId}
+            divisionId={formData.divisionId}
+            onChange={(field, value) => handleInputChange(field, value)}
+          />
+        )}
       </Card>
     </ScrollView>
   );

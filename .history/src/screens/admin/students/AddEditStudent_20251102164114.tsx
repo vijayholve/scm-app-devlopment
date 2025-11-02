@@ -37,13 +37,12 @@ const transformStudentData = (data: any, isUpdate: boolean) => {
         // Map DOB field (API payload had 'bateOfBirth' and 'dob', using 'dob' for consistency)
         dob: data.dob, 
         bateOfBirth: data.dob, 
-        
+
         // Ensure IDs/numbers are converted to integers for the API
         rollNo: data.rollNo ? parseInt(data.rollNo, 10) : null,
         classId: data.classId ? parseInt(data.classId, 10) : null,
         divisionId: data.divisionId ? parseInt(data.divisionId, 10) : null,
         schoolId: data.schoolId ? parseInt(data.schoolId, 10) : null,
-
     };
     
     // Remove password if we are updating and the password field is empty
@@ -76,9 +75,8 @@ export const AddEditStudent: React.FC = () => {
       saveUrl="/api/users/save"
       updateUrl="/api/users/update"
       onSuccessUrl="StudentList"
-      transformForSubmit={handleTransform} // Pass transformation function ,
-      showSCDSelector= {true}
-      showCancelButton= {true}
+      transformForSubmit={handleTransform} // Pass transformation function
+      
       // Pass the custom Cancel Button to the ReusableForm component
       cancelButton={
         <Button mode="outlined" onPress={handleCancel} style={styles.cancelButton}>

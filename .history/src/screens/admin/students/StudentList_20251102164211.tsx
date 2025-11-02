@@ -55,7 +55,7 @@ export const StudentList: React.FC = () => {
         entityName="Student"
         searchPlaceholder="Search students..."
         transformData={transformStudentData}
-        
+        scdSelector={true}
       />
     </View>
   );

@@ -78,7 +78,7 @@ export const AddEditStudent: React.FC = () => {
       onSuccessUrl="StudentList"
       transformForSubmit={handleTransform} // Pass transformation function ,
       showSCDSelector= {true}
-      showCancelButton= {true}
+      show
       // Pass the custom Cancel Button to the ReusableForm component
       cancelButton={
         <Button mode="outlined" onPress={handleCancel} style={styles.cancelButton}>
