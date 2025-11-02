@@ -1,0 +1,36 @@
+{
+  "menu": {
+    "masters": {
+      "groupTitle": "Masters",
+      "users": "Users",
+      "teachers": "Teachers",
+      "students": "Students",
+      "institutesCollapse": "Institutes",
+      "institutesItem": "Institutes",
+      "schools": "Schools",
+      "classes": "Classes",
+      "divisions": "Divisions",
+      "subjects": "Subjects",
+      "attendance": "Attendance",
+      "studentAttendance": "Student Attendance",
+      "assignments": "Assignments",
+      "roles": "Roles",
+      "exams": "Exams",
+      "examsTeacherView": "Teacher View",
+      "examsStudentView": "Student View",
+      "timetables": "Timetables",
+      "idCards": "ID Cards",
+      "lms": "LMS",
+      "feeManagement": "Fee Management",
+      "adminFeeDashboard": "Admin Fee Dashboard",
+      "myFees": "My Fees",
+      "documentHub": "Document Hub",
+      "notifications": "Notifications",
+      "quizTests": "Quiz & Tests",
+      "manageQuizzes": "Manage Quizzes",
+      "availableQuizzes": "Available Quizzes",
+      "idCardManagement": "ID Card Management",
+      "leavingCertificateManagement": "Leaving Certificate Management"
+    }
+  }
+}

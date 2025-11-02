@@ -1,0 +1,16 @@
+{
+  "label": {
+    "school": "École",
+    "class": "Classe",
+    "division": "Division"
+  },
+  "option": {
+    "allSchools": "Toutes les Écoles",
+    "allClasses": "Toutes les Classes",
+    "allDivisions": "Toutes les Divisions",
+    "none": "Aucun"
+  },
+  "action": {
+    "clear": "Effacer"
+  }
+}

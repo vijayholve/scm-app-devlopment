@@ -1,0 +1,50 @@
+{
+  "title": "Noter les Examens",
+  "gradeExamTitle": "Noter l'Examen",
+  "filters": {
+    "selectSchool": "Sélectionner l'École",
+    "selectClass": "Sélectionner la Classe",
+    "selectDivision": "Sélectionner la Division",
+    "selectExam": "Sélectionner l'Examen"
+  },
+  "dataGrid": {
+    "studentName": "Nom de l'Élève",
+    "actions": "Actions",
+    "saveAll": "Tout Enregistrer",
+    "placeholderMarks": "Notes"
+  },
+  "gradingView": {
+    "titlePrefix": "Notation",
+    "tabEnterMarks": "Saisir les Notes",
+    "tabViewPaperAnswers": "Voir l'Épreuve et les Réponses",
+    "tabViewQuizResult": "Voir le Résultat du Quiz",
+    "tabUploadPaper": "Télécharger l'Épreuve",
+    "marksHeading": "Saisir les Notes (sur {{maxMarks}})",
+    "saveMarks": "Enregistrer les Notes",
+    "back": "Retour",
+    "questionAnswerTitle": "Épreuve et Réponses de l'Élève",
+    "placeholderViewText": "Ceci est une vue de remplacement pour l'examen de {{subjectName}}.",
+    "studentAnswer": "Réponse de {{studentName}} : {{answer}}",
+    "questionPrefix": "Question :",
+    "uploadPaperTitle": "Télécharger l'Épreuve d'Examen",
+    "selectFileLabel": "Sélectionner un fichier à télécharger",
+    "uploadButton": "Télécharger l'Épreuve",
+    "uploadingButton": "Téléchargement...",
+    "noQuestionFound": "Aucune question trouvée pour cette matière.",
+    "noAnswerSubmitted": "Aucune réponse soumise."
+  },
+  "toasts": {
+    "loadExamsFail": "Échec du chargement des examens",
+    "marksExceeded": "Les notes ne peuvent pas dépasser {{maxMarks}}.",
+    "saveMarksSuccess": "Notes enregistrées avec succès pour {{studentName}} !",
+    "saveMarksFail": "Échec de l'enregistrement des notes. Veuillez réessayer.",
+    "selectFileToUpload": "Veuillez sélectionner un fichier à télécharger.",
+    "uploadSuccess": "Épreuve d'examen téléchargée avec succès !",
+    "uploadFail": "Échec du téléchargement de l'épreuve d'examen."
+  },
+  "errorBoundary": {
+    "title": "Erreur",
+    "message": "Une erreur s'est produite lors du chargement de la page.",
+    "retry": "Réessayer"
+  }
+}

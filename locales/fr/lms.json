@@ -1,0 +1,277 @@
+{
+  "title": {
+    "courseManagement": "Gestion des Cours",
+    "myCourses": "Mes Cours",
+    "editCourse": "Modifier le Cours",
+    "createCourse": "Créer un Cours",
+    "addNewLesson": "Ajouter une Nouvelle Leçon",
+    "editLesson": "Modifier la Leçon",
+    "addNewModule": "Ajouter un Nouveau Module",
+    "editModule": "Modifier le Module"
+  },
+  "common": {
+    "progress": "Progression",
+    "loadingCourses": "Chargement des cours...",
+    "status": "Statut",
+    "selectStatus": "Sélectionner le Statut",
+    "noImage": "Aucune Image",
+    "percentComplete": "{0}% complété",
+    "sections": "{0} sections",
+    "lectures": "{0} conférences",
+    "minutesTotalLength": "{0} de durée totale"
+  },
+  "status": {
+    "completed": "Terminé",
+    "inProgress": "En Cours",
+    "active": "Actif",
+    "inactive": "Inactif",
+    "draft": "Brouillon",
+    "locked": "Verrouillé",
+    "enrolled": "✓ Inscrit",
+    "completedLesson": "Terminé",
+    "showcaseEnrolled": "INSCRIT"
+  },
+  "action": {
+    "enrollInCourses": "S'inscrire aux Cours",
+    "enroll": "S'inscrire",
+    "enrollTooltip": "S'inscrire à ce cours",
+    "viewDetails": "Voir les Détails",
+    "clearFilters": "Effacer les Filtres",
+    "enrollToAccess": "S'inscrire pour Accéder",
+    "downloadDocument": "Télécharger le Document",
+    "downloadDocumentBtn": "Télécharger le Document",
+    "expandAll": "Développer toutes les sections",
+    "enrollNow": "S'inscrire Maintenant",
+    "enrolling": "Inscription en cours...",
+    "viewCourse": "Voir le cours",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "addModule": "Ajouter un Module",
+    "addLesson": "Ajouter une Leçon",
+    "change": "Changer",
+    "upload": "Téléverser",
+    "remove": "Supprimer",
+    "adding": "Ajout en cours...",
+    "exploreCourses": "Explorer les Cours",
+    "startLearningToday": "Commencer à Apprendre Aujourd'hui",
+    "getStarted": "Commencer",
+    "browseCourses": "Parcourir les Cours",
+    "viewDashboard": "Voir le Tableau de Bord",
+    "myCourses": "Mes Cours",
+    "exploreMore": "Explorer Plus",
+    "continueLearning": "Continuer l'Apprentissage",
+    "startLearningNow": "Commencer à Apprendre Maintenant",
+    "exploreFeatures": "Explorer les Fonctionnalités",
+    "viewAllCourses": "Voir Tous les Cours",
+    "showcaseContinue": "Continuer l'Apprentissage",
+    "startTest": "Commencer le Test",
+    "login": "Se Connecter",
+    "signUp": "S'inscrire",
+    "logout": "Se Déconnecter",
+    "preparing": "Préparation..."
+  },
+  "error": {
+    "loadFailed": "Échec du chargement des cours. Veuillez réessayer plus tard.",
+    "downloadFailed": "Échec du téléchargement du document.",
+    "courseNotFound": "Cours introuvable ou échec du chargement.",
+    "enrollRequired": "Veuillez vous inscrire pour accéder au contenu de la leçon.",
+    "enrollmentRequired": "Inscription requise",
+    "enrollmentContentLock": "Vous devez vous inscrire pour accéder à ce contenu du cours.",
+    "lessonTitleRequired": "Le titre de la leçon est obligatoire.",
+    "addLessonFailed": "Échec de l'ajout de la leçon. Veuillez réessayer.",
+    "moduleTitleRequired": "Le titre du module est obligatoire.",
+    "addModuleFailed": "Échec de l'ajout du module. Veuillez réessayer.",
+    "loadQuizzesFailed": "Échec du chargement des quiz pour les critères sélectionnés.",
+    "loadDocumentsFailed": "Échec du chargement des documents pour les critères sélectionnés."
+  },
+  "success": {
+    "quizzesLoaded": "Quiz chargés avec succès !"
+  },
+  "info": {
+    "noQuizzesFound": "Aucun quiz trouvé pour les critères sélectionnés."
+  },
+  "course": {
+    "id": "ID",
+    "title": "Titre",
+    "school": "École",
+    "class": "Classe",
+    "division": "Division",
+    "status": "Statut",
+    "courseTitle": "Titre du Cours",
+    "description": "Description",
+    "headerBanner": "Bannière d'En-tête",
+    "courseBanner": "Bannière du Cours",
+    "modules": "Modules",
+    "noModulesAdded": "Aucun module ajouté pour l'instant.",
+    "whatYoullLearn": "Ce que vous apprendrez",
+    "content": "Contenu du cours",
+    "includes": "Ce cours comprend :",
+    "certificate": "Certificat de fin de formation",
+    "instructor": "Instructeur",
+    "instructorRating": "Évaluation de l'Instructeur",
+    "modulesAndLessons": "Modules et Leçons",
+    "enrolledStudents": "Étudiants Inscrits",
+    "noStudentsEnrolled": "Aucun étudiant inscrit.",
+    "instructorPrefix": "Instructeur : {0}",
+    "outline": "Aperçu du Cours",
+    "noModulesFound": "Aucun module trouvé pour ce cours.",
+    "enrolledStudentsCount": "Étudiants Inscrits ({0})",
+    "contentSummary": "{0} sections • {1} conférences • {2} de durée totale"
+  },
+  "lesson": {
+    "title": "Titre de la Leçon",
+    "content": "Contenu",
+    "type": "Type de Leçon",
+    "selectType": "Sélectionner le Type",
+    "link": "Lien",
+    "selectDocument": "Sélectionner le Document",
+    "selectTest": "Sélectionner le Test",
+    "loadingTests": "Chargement des Tests...",
+    "noLessonsAdded": "Aucune leçon ajoutée.",
+    "selectToView": "Sélectionnez une leçon pour voir son contenu.",
+    "noVideoLink": "Aucun lien vidéo fourni.",
+    "noTextContent": "Aucun contenu spécifique fourni pour cette leçon de texte.",
+    "documentDownloadPrompt": "Cliquez ci-dessous pour télécharger le document associé.",
+    "assessmentInfo": "Cette leçon est une évaluation.",
+    "types": {
+      "video": "Vidéo",
+      "document": "Document",
+      "reading": "Lecture",
+      "quiz": "Quiz",
+      "assessment": "Évaluation",
+      "text": "Texte"
+    },
+    "preview": "Aperçu"
+  },
+  "module": {
+    "title": "Titre du Module",
+    "description": "Description",
+    "lessons": "Leçons",
+    "noLessonsAdded": "Aucune leçon ajoutée."
+  },
+  "catalog": {
+    "header": "Explorez Nos Cours",
+    "subheader": "Découvrez de nouvelles compétences et faites progresser votre carrière grâce à nos cours dirigés par des experts",
+    "searchPlaceholder": "Rechercher des cours...",
+    "category": "Catégorie",
+    "allCategories": "Toutes les Catégories",
+    "level": "Niveau",
+    "allLevels": "Tous les Niveaux",
+    "price": "Prix",
+    "allPrices": "Tous les Prix",
+    "summary": "Affichage de {0} sur {1} cours",
+    "noCoursesFound": "Aucun cours trouvé correspondant à vos critères"
+  },
+  "price": {
+    "free": "Gratuit",
+    "paid": "Payant",
+    "premium": "Premium"
+  },
+  "showcase": {
+    "enrolledTitle": "Mes Cours Inscrits ({0})",
+    "featuredTitle": {
+      "guest": "Cours Recommandés",
+      "user": "Recommandé pour Vous",
+      "enrolled": "Découvrir Plus de Cours"
+    }
+  },
+  "hero": {
+    "guestTitle": "Apprenez Sans Limites",
+    "guestSubtitle": "Découvrez des milliers de cours et améliorez vos compétences grâce à notre plateforme d'apprentissage complète",
+    "userTitle": "Bienvenue de Retour !",
+    "userSubtitle": "Poursuivez votre parcours d'apprentissage et découvrez de nouveaux cours conçus spécialement pour vous",
+    "enrolledTitle": "Continuer l'Apprentissage",
+    "enrolledSubtitle": "Reprenez là où vous vous êtes arrêté et continuez à progresser dans vos cours inscrits"
+  },
+  "cta": {
+    "enrolledTitle": "Poursuivez Votre Parcours d'Apprentissage",
+    "enrolledDescription": "Reprenez là où vous vous êtes arrêté et maîtrisez de nouvelles compétences avec notre bibliothèque de cours complète.",
+    "guestTitle": "Transformez Votre Carrière Aujourd'hui",
+    "guestDescription": "Rejoignez des milliers d'apprenants qui ont fait progresser leur carrière grâce à nos cours conçus par des experts.",
+    "whiteTitle": "Pourquoi Choisir Notre Plateforme ?",
+    "whiteSubtitle": "Conçu pour les Apprenants Modernes",
+    "whiteDescription": "Notre système de gestion de l'apprentissage de pointe est conçu pour offrir la meilleure expérience éducative avec des fonctionnalités et des outils innovants."
+  },
+  "feature": {
+    "expertCoursesTitle": "Cours Dirigés par des Experts",
+    "expertCoursesDesc": "Apprenez auprès de professionnels de l'industrie avec des années d'expérience",
+    "trackProgressTitle": "Suivre la Progression",
+    "trackProgressDesc": "Surveillez votre parcours d'apprentissage avec des analyses détaillées",
+    "communityTitle": "Soutien Communautaire",
+    "communityDesc": "Connectez-vous avec d'autres apprenants et instructeurs"
+  },
+  "valueProp": {
+    "header": "Apprentissage Structuré pour des Résultats Réels",
+    "feature1": {
+      "title": "Programme Modulaire",
+      "desc": "Leçons pratiques et concises couvrant chaque module koolERP, de la navigation de base à la configuration avancée."
+    },
+    "feature2": {
+      "title": "Pratique Manuelle",
+      "desc": "Accès à des environnements de test en direct pour pratiquer immédiatement les configurations système et les transactions réelles."
+    },
+    "feature3": {
+      "title": "Experts Accrédités",
+      "desc": "Formez-vous avec des instructeurs certifiés qui ont des années d'expérience dans la mise en œuvre et la gestion de koolERP à l'échelle mondiale."
+    }
+  },
+  "about": {
+    "header": "À Propos de Notre Plateforme d'Apprentissage",
+    "subheader": "Autonomiser les apprenants du monde entier avec une éducation accessible et de haute qualité",
+    "missionTitle": "Notre Mission",
+    "missionText": "Démocratiser l'éducation en fournissant des expériences d'apprentissage accessibles et de haute qualité qui permettent aux individus d'atteindre leurs objectifs personnels et professionnels, quelle que soit leur origine ou leurs circonstances.",
+    "stat": {
+      "courses": "Cours Disponibles",
+      "students": "Étudiants Actifs",
+      "instructors": "Instructeurs Experts",
+      "certificates": "Certificats Délivrés"
+    },
+    "storyTitle": "Notre Histoire",
+    "valuesTitle": "Nos Valeurs",
+    "value1": {
+      "title": "Éducation de Qualité"
+    },
+    "value2": {
+      "title": "Accessibilité"
+    },
+    "value3": {
+      "title": "Innovation"
+    },
+    "value4": {
+      "title": "Communauté"
+    },
+    "teamTitle": "Rencontrez Notre Équipe"
+  },
+  "nav": {
+    "home": "Accueil",
+    "courses": "Cours",
+    "about": "À Propos",
+    "dashboard": "Tableau de Bord",
+    "lightMode": "Passer au Mode Clair",
+    "darkMode": "Passer au Mode Sombre"
+  },
+  "footer": {
+    "platform": "Plateforme",
+    "support": "Support",
+    "legal": "Légal",
+    "followUs": "Suivez-Nous",
+    "browseCourses": "Parcourir les Cours",
+    "aboutUs": "À Propos de Nous",
+    "pricing": "Tarification",
+    "contact": "Contact",
+    "helpCenter": "Centre d'Aide",
+    "community": "Communauté",
+    "documentation": "Documentation",
+    "systemStatus": "État du Système",
+    "privacyPolicy": "Politique de Confidentialité",
+    "termsOfService": "Conditions d'Utilisation",
+    "cookiePolicy": "Politique de Cookies",
+    "gdpr": "RGPD",
+    "tagline": "Autonomiser les apprenants du monde entier avec une technologie éducative de pointe et des cours dirigés par des experts.",
+    "email": "contact@koolerp.com",
+    "phone": "+91 91588 06129",
+    "address": "Pune, Inde",
+    "madeWithLove": "Fait avec ❤️ pour les apprenants du monde entier",
+    "copyright": "© 2024 KoolERP. Tous droits réservés."
+  }
+}

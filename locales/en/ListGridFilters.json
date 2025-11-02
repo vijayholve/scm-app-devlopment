@@ -1,0 +1,16 @@
+{
+  "label": {
+    "school": "School",
+    "class": "Class",
+    "division": "Division"
+  },
+  "option": {
+    "allSchools": "All Schools",
+    "allClasses": "All Classes",
+    "allDivisions": "All Divisions",
+    "none": "None"
+  },
+  "action": {
+    "clear": "Clear"
+  }
+}

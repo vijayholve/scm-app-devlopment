@@ -1,0 +1,50 @@
+{
+  "title": "Grade Exams",
+  "gradeExamTitle": "Grade Exam",
+  "filters": {
+    "selectSchool": "Select School",
+    "selectClass": "Select Class",
+    "selectDivision": "Select Division",
+    "selectExam": "Select Exam"
+  },
+  "dataGrid": {
+    "studentName": "Student Name",
+    "actions": "Actions",
+    "saveAll": "Save All",
+    "placeholderMarks": "Marks"
+  },
+  "gradingView": {
+    "titlePrefix": "Grading",
+    "tabEnterMarks": "Enter Marks",
+    "tabViewPaperAnswers": "View Paper & Answers",
+    "tabViewQuizResult": "View Quiz Result",
+    "tabUploadPaper": "Upload Paper",
+    "marksHeading": "Enter Marks (Out of {{maxMarks}})",
+    "saveMarks": "Save Marks",
+    "back": "Back",
+    "questionAnswerTitle": "Question Paper & Student's Answers",
+    "placeholderViewText": "This is a placeholder view for the {{subjectName}} exam.",
+    "studentAnswer": "{{studentName}}'s Answer: {{answer}}",
+    "questionPrefix": "Question:",
+    "uploadPaperTitle": "Upload Exam Paper",
+    "selectFileLabel": "Select a file to upload",
+    "uploadButton": "Upload Paper",
+    "uploadingButton": "Uploading...",
+    "noQuestionFound": "No question found for this subject.",
+    "noAnswerSubmitted": "No answer submitted."
+  },
+  "toasts": {
+    "loadExamsFail": "Failed to load exams",
+    "marksExceeded": "Marks cannot exceed {{maxMarks}}.",
+    "saveMarksSuccess": "Marks saved successfully for {{studentName}}!",
+    "saveMarksFail": "Failed to save marks. Please try again.",
+    "selectFileToUpload": "Please select a file to upload.",
+    "uploadSuccess": "Exam paper uploaded successfully!",
+    "uploadFail": "Failed to upload exam paper."
+  },
+  "errorBoundary": {
+    "title": "Error",
+    "message": "Something went wrong while loading the page.",
+    "retry": "Retry"
+  }
+}

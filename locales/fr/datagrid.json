@@ -1,0 +1,94 @@
+{
+  "header": {
+    "actions": "Actions",
+    "totalOrder": "Commande Totale",
+    "totalIncome": "Revenu Total"
+  },
+  "tooltip": {
+    "viewDetails": "Voir les Détails",
+    "enroll": "S'inscrire",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "viewSubjects": "Voir les Matières",
+    "viewSchedule": "Voir l'Emploi du Temps"
+  },
+  "action": {
+    "refresh": "Actualiser",
+    "viewMore": "Afficher plus",
+    "viewAll": "Tout Afficher",
+    "saveAll": "Tout Enregistrer"
+  },
+  "search": {
+    "placeholder": "Rechercher quelque chose...",
+    "filtersActive": "filtres actifs"
+  },
+  "filter": {
+    "selectSchool": "Sélectionner l'École",
+    "selectClass": "Sélectionner la Classe",
+    "selectDivision": "Sélectionner la Division",
+    "allSchools": "Toutes les Écoles",
+    "allClasses": "Toutes les Classes",
+    "allDivisions": "Toutes les Divisions",
+    "clear": "Effacer",
+    "all": "Tous"
+  },
+  "columnHeader": {
+    "id": "ID",
+    "name": "Nom",
+    "rollNo": "Numéro de Matricule",
+    "userName": "Nom d'Utilisateur",
+    "firstName": "Prénom",
+    "lastName": "Nom de Famille",
+    "email": "E-mail",
+    "mobile": "Numéro de Mobile",
+    "code": "Code",
+    "address": "Adresse",
+    "status": "Statut",
+    "subjectCode": "Code de Matière",
+    
+    "school": "École",
+    "schoolName": "Nom de l'École",
+    "class": "Classe",
+    "className": "Nom de la Classe",
+    "division": "Division",
+    "divisionName": "Nom de la Division",
+    "subject": "Matière",
+    "documentName": "Nom du Document",
+    "instituteName": "Institut",
+    "instituteId": "ID de l'Institut",
+    
+    "select": "Sélectionner",
+    "gender": "Genre",
+    "actions": "Actions",
+    "faxNumber": "Numéro de Fax",
+    "attendanceDate": "Date de Présence",
+    
+    "examName": "Nom de l'Examen",
+    "examType": "Type d'Examen",
+    "year": "Année",
+    "totalMark": "Note Totale",
+    "showScore": "Afficher le Score",
+    
+    "yes": "Oui",
+    "no": "Non",
+    "total": "Total",
+    "paid": "Payé",
+    "pending": "En Attente",
+    "feeName": "Nom des Frais",
+    "title": "Titre",
+    "description": "Description",
+    "createdBy": "Créé Par",
+    "deadLine": "Date Limite",
+    "startDate": "Date de Début",
+    "startTime": "Heure de Début",
+    "endTime": "Heure de Fin"
+},
+  "confirm": {
+    "deleteItem": "Êtes-vous sûr de vouloir supprimer cet élément ?"
+  },
+  "toast": {
+    "deleteSuccess": "Élément supprimé avec succès !",
+    "deleteFail": "Échec de la suppression de l'élément.",
+    "fetchFail": "Impossible de récupérer les données."
+  }
+}

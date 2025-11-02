@@ -1,0 +1,86 @@
+{
+  "student": {
+    "title": {
+      "add": "Ajouter un Étudiant",
+      "edit": "Modifier l'Étudiant"
+    },
+    "tabs": {
+      "details": "Détails de l'Étudiant",
+      "documents": "Documents"
+    },
+    "fields": {
+      "userName": "Nom d'Utilisateur",
+      "password": "Mot de Passe",
+      "firstName": "Prénom",
+      "lastName": "Nom de Famille",
+      "mobile": "Numéro de Mobile",
+      "email": "E-mail",
+      "dateOfBirth": "Date de Naissance",
+      "address": "Adresse",
+      "rollNo": "Numéro de Matricule",
+      "school": "École",
+      "class": "Classe",
+      "division": "Division",
+      "role": "Rôle"
+    },
+    "validation": {
+      "emailRequired": "L'E-mail est obligatoire",
+      "emailInvalid": "Doit être un e-mail valide",
+      "passwordRequired": "Le Mot de Passe est obligatoire",
+      "userNameRequired": "Le Nom d'Utilisateur est obligatoire",
+      "firstNameRequired": "Le Prénom est obligatoire",
+      "lastNameRequired": "Le Nom de Famille est obligatoire",
+      "mobileRequired": "Le Numéro de Mobile est obligatoire",
+      "mobileDigitsOnly": "Le numéro de mobile doit contenir uniquement des chiffres",
+      "mobileMin": "Le numéro de mobile doit contenir au moins 10 chiffres",
+      "mobileMax": "Le numéro de mobile ne peut pas dépasser 15 chiffres",
+      "rollNoRequired": "Le Numéro de Matricule est obligatoire",
+      "dobRequired": "La Date de Naissance est obligatoire",
+      "dobFuture": "La Date de Naissance ne peut pas être future",
+      "classRequired": "La Classe est obligatoire",
+      "divisionRequired": "La Division est obligatoire",
+      "roleRequired": "Le Rôle est obligatoire"
+    },
+    "messages": {
+      "loading": "Chargement des données de l'étudiant...",
+      "fetchFailed": "Échec du chargement des données de l'étudiant.",
+      "updateSuccess": "Étudiant mis à jour avec succès",
+      "createSuccess": "Étudiant ajouté avec succès",
+      "saveError": "Échec de l'enregistrement des données de l'étudiant."
+    },
+    "bulkUpload": {
+      "title": "Téléversement en Masse d'Étudiants",
+      "prompt": {
+        "selectSCD": "Sélectionnez d'abord l'École, la Classe et la Division. Ensuite, téléversez le fichier Excel rempli.",
+        "clickFile": "Cliquez pour sélectionner un fichier .xlsx",
+        "maxSize": "Taille maximale du fichier : 5 Mo",
+        "selectFileError": "Veuillez sélectionner un fichier à téléverser.",
+        "selectSCDError": "Veuillez sélectionner l'École, la Classe et la Division avant de téléverser."
+      },
+      "action": {
+        "downloadSample": "Télécharger l'Exemple de Fichier Excel",
+        "downloading": "Téléchargement en cours...",
+        "upload": "Téléverser",
+        "uploading": "Téléversement en cours...",
+        "close": "Fermer"
+      },
+      "result": {
+        "summaryHeading": "Résumé du Téléversement",
+        "createdUsers": "Utilisateurs Créés",
+        "successCount": "Créés :",
+        "failCount": "Échoués :",
+        "totalProcessed": "Total traité :",
+        "failureDetails": "Détails de l'Échec",
+        "recordCreated": "Créé",
+        "failed": "Échoué",
+        "invalidFile": "Veuillez sélectionner un fichier Excel valide (.xlsx).",
+        "uploadFailed": "Le téléversement en masse a échoué."
+      },
+      "label": {
+        "school": "École",
+        "class": "Classe",
+        "division": "Division"
+      }
+    }
+  }
+}

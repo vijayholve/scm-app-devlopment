@@ -1,0 +1,50 @@
+{
+  "title": "परीक्षांना ग्रेड द्या",
+  "gradeExamTitle": "परीक्षेला ग्रेड द्या",
+  "filters": {
+    "selectSchool": "शाळा निवडा",
+    "selectClass": "वर्ग निवडा",
+    "selectDivision": "विभाग निवडा",
+    "selectExam": "परीक्षा निवडा"
+  },
+  "dataGrid": {
+    "studentName": "विद्यार्थ्याचे नाव",
+    "actions": "कार्ये",
+    "saveAll": "सर्व जतन करा",
+    "placeholderMarks": "गुण"
+  },
+  "gradingView": {
+    "titlePrefix": "ग्रेडिंग",
+    "tabEnterMarks": "गुण प्रविष्ट करा",
+    "tabViewPaperAnswers": "पेपर आणि उत्तरे पहा",
+    "tabViewQuizResult": "क्विझ निकाल पहा",
+    "tabUploadPaper": "पेपर अपलोड करा",
+    "marksHeading": "गुण प्रविष्ट करा (जास्तीत जास्त {{maxMarks}} पैकी)",
+    "saveMarks": "गुण जतन करा",
+    "back": "मागे",
+    "questionAnswerTitle": "प्रश्नपत्रिका आणि विद्यार्थ्यांची उत्तरे",
+    "placeholderViewText": "हे {{subjectName}} परीक्षेसाठी एक प्लेसहोल्डर दृश्य आहे.",
+    "studentAnswer": "{{studentName}} चे उत्तर: {{answer}}",
+    "questionPrefix": "प्रश्न:",
+    "uploadPaperTitle": "परीक्षा पेपर अपलोड करा",
+    "selectFileLabel": "अपलोड करण्यासाठी फाइल निवडा",
+    "uploadButton": "पेपर अपलोड करा",
+    "uploadingButton": "अपलोड करत आहे...",
+    "noQuestionFound": "या विषयासाठी कोणताही प्रश्न आढळला नाही.",
+    "noAnswerSubmitted": "कोणतेही उत्तर सबमिट केलेले नाही."
+  },
+  "toasts": {
+    "loadExamsFail": "परीक्षा लोड करण्यात अयशस्वी",
+    "marksExceeded": "गुण {{maxMarks}} पेक्षा जास्त असू शकत नाहीत.",
+    "saveMarksSuccess": "{{studentName}} साठी गुण यशस्वीरित्या जतन केले!",
+    "saveMarksFail": "गुण जतन करण्यात अयशस्वी. कृपया पुन्हा प्रयत्न करा.",
+    "selectFileToUpload": "कृपया अपलोड करण्यासाठी फाइल निवडा.",
+    "uploadSuccess": "परीक्षा पेपर यशस्वीरित्या अपलोड झाला!",
+    "uploadFail": "परीक्षा पेपर अपलोड करण्यात अयशस्वी."
+  },
+  "errorBoundary": {
+    "title": "त्रुटी",
+    "message": "पृष्ठ लोड करताना काहीतरी चूक झाली.",
+    "retry": "पुन्हा प्रयत्न करा"
+  }
+}

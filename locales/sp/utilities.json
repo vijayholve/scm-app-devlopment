@@ -1,0 +1,35 @@
+{
+  "menu": {
+    "masters": {
+      "groupTitle": "Maestros",
+      "users": "Usuarios",
+      "teachers": "Profesores",
+      "students": "Estudiantes",
+      "institutesCollapse": "Institutos",
+      "institutesItem": "Instituto",
+      "schools": "Escuelas",
+      "classes": "Clases",
+      "divisions": "Divisiones",
+      "subjects": "Asignaturas",
+      "attendance": "Asistencia",
+      "studentAttendance": "Asistencia de Estudiantes",
+      "assignments": "Tareas",
+      "roles": "Roles",
+      "exams": "Exámenes",
+      "examsTeacherView": "Vista del Profesor",
+      "examsStudentView": "Vista del Estudiante",
+      "timetables": "Horarios",
+      "idCards": "Tarjetas de Identificación",
+      "lms": "LMS",
+      "feeManagement": "Gestión de Tarifas",
+      "adminFeeDashboard": "Panel de Tarifas de Administrador",
+      "myFees": "Mis Tarifas",
+      "documentHub": "Centro de Documentos",
+      "notifications": "Notificaciones",
+      "quizTests": "Cuestionarios y Pruebas",
+      "manageQuizzes": "Administrar Cuestionarios",
+      "availableQuizzes": "Cuestionarios Disponibles",
+      "leavingCertificateManagement": "Gestión de Certificados de Baja"
+    }
+  }
+}

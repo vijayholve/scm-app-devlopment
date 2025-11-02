@@ -1,0 +1,94 @@
+{
+  "header": {
+    "actions": "कार्य",
+    "totalOrder": "कुल ऑर्डर",
+    "totalIncome": "कुल आय"
+  },
+  "tooltip": {
+    "viewDetails": "विवरण देखें",
+    "enroll": "नामांकन करें",
+    "edit": "संपादित करें",
+    "delete": "हटाएं",
+    "viewSubjects": "विषय देखें",
+    "viewSchedule": "समय सारणी देखें"
+  },
+  "action": {
+    "refresh": "ताज़ा करें",
+    "viewMore": "और दिखाओ",
+    "viewAll": "सभी देखें",
+    "saveAll": "सभी सहेजें"
+  },
+  "search": {
+    "placeholder": "कुछ भी खोजें...",
+    "filtersActive": "फ़िल्टर सक्रिय"
+  },
+  "filter": {
+    "selectSchool": "स्कूल चुनें",
+    "selectClass": "कक्षा चुनें",
+    "selectDivision": "विभाग चुनें",
+    "allSchools": "सभी स्कूल",
+    "allClasses": "सभी कक्षाएं",
+    "allDivisions": "सभी विभाग",
+    "clear": "साफ़ करें",
+    "all": "सभी"
+  },
+  "columnHeader": {
+    "id": "आईडी",
+    "name": "नाम",
+    "rollNo": "रोल नंबर",
+    "userName": "यूज़र नेम",
+    "firstName": "पहला नाम",
+    "lastName": "अंतिम नाम",
+    "email": "ईमेल",
+    "mobile": "मोबाइल नंबर",
+    "code": "कोड",
+    "address": "पता",
+    "status": "स्थिति",
+    "subjectCode": "विषय कोड",
+    
+    "school": "स्कूल",
+    "schoolName": "स्कूल का नाम",
+    "class": "कक्षा",
+    "className": "कक्षा का नाम",
+    "division": "विभाग",
+    "divisionName": "विभाग का नाम",
+    "subject": "विषय",
+    "documentName": "दस्तावेज़ का नाम",
+    "instituteName": "संस्थान",
+    "instituteId": "संस्थान आईडी",
+    
+    "select": "चुनें",
+    "gender": "लिंग",
+    "actions": "कार्य",
+    "faxNumber": "फैक्स नंबर",
+    "attendanceDate": "उपस्थिति तिथि",
+    "showScore": "स्कोर दिखाएं",
+    "examName": "परीक्षा का नाम",
+    "examType": "परीक्षा प्रकार",
+    "year": "वर्ष",
+    "totalMark": "कुल अंक",
+    "showScore": "स्कोर दिखाएं",
+    
+    "yes": "हाँ",
+    "no": "नहीं",
+    "total": "कुल",
+    "paid": "भुगतान किया गया",
+    "pending": "लंबित",
+    "feeName": "शुल्क का नाम",
+    "title": "शीर्षक",
+    "description": "विवरण",
+    "createdBy": "इसके द्वारा बनाया गया",
+    "deadLine": "समय सीमा",
+    "startDate": "प्रारंभ तिथि",
+    "startTime": "प्रारंभ समय",
+    "endTime": "समाप्ति समय"
+  },
+  "confirm": {
+    "deleteItem": "क्या आप वाकई इस आइटम को हटाना चाहते हैं?"
+  },
+  "toast": {
+    "deleteSuccess": "आइटम सफलतापूर्वक हटा दिया गया!",
+    "deleteFail": "आइटम हटाने में विफल रहा।",
+    "fetchFail": "डेटा प्राप्त नहीं किया जा सका।"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "header": {
+    "actions": "Acciones",
+    "totalOrder": "Total de Pedidos",
+    "totalIncome": "Ingresos Totales"
+  },
+  "tooltip": {
+    "viewDetails": "Ver Detalles",
+    "enroll": "Inscribir",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "viewSubjects": "Ver Asignaturas",
+    "viewSchedule": "Ver Horario"
+  },
+  "action": {
+    "refresh": "Actualizar",
+    "viewMore": "Ver Más",
+    "viewAll": "Ver Todos",
+    "saveAll": "Guardar Todos"
+  },
+  "search": {
+    "placeholder": "Buscar algo...",
+    "filtersActive": "Filtros Activos"
+  },
+  "filter": {
+    "selectSchool": "Seleccionar Escuela",
+    "selectClass": "Seleccionar Clase",
+    "selectDivision": "Seleccionar División",
+    "allSchools": "Todas las Escuelas",
+    "allClasses": "Todas las Clases",
+    "allDivisions": "Todas las Divisiones",
+    "clear": "Limpiar",
+    "all": "Todos"
+  },
+  "columnHeader": {
+    "id": "ID",
+    "name": "Nombre",
+    "rollNo": "Nº de Lista",
+    "userName": "Nombre de Usuario",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "email": "Correo Electrónico",
+    "mobile": "Número de Móvil",
+    "code": "Código",
+    "address": "Dirección",
+    "status": "Estado",
+    "subjectCode": "Código de Asignatura",
+    
+    "school": "Escuela",
+    "schoolName": "Nombre de la Escuela",
+    "class": "Clase",
+    "className": "Nombre de la Clase",
+    "division": "División",
+    "divisionName": "Nombre de la División",
+    "subject": "Asignatura",
+    "documentName": "Nombre del Documento",
+    "instituteName": "Instituto",
+    "instituteId": "ID del Instituto",
+    
+    "select": "Seleccionar",
+    "gender": "Género",
+    "actions": "Acciones",
+    "faxNumber": "Número de Fax",
+    "attendanceDate": "Fecha de Asistencia",
+    
+    "examName": "Nombre del Examen",
+    "examType": "Tipo de Examen",
+    "year": "Año",
+    "totalMark": "Puntuación Total",
+    "showScore": "¿Mostrar Puntuación?",
+    
+    "total": "Total",
+    "paid": "Pagado",
+    "pending": "Pendiente",
+    "feeName": "Nombre de la Tarifa",
+    "title": "Título",
+    "description": "Descripción",
+    "createdBy": "Creado Por",
+    "deadLine": "Fecha Límite",
+    "startDate": "Fecha de Inicio",
+    "startTime": "Hora de Inicio",
+    "endTime": "Hora de Finalización",
+    "yes": "Sí",
+    "no": "No"
+  },
+  "confirm": {
+    "deleteItem": "¿Está seguro de que desea eliminar este elemento?"
+  },
+  "toast": {
+    "deleteSuccess": "¡Elemento eliminado con éxito!",
+    "deleteFail": "Error al eliminar el elemento.",
+    "fetchFail": "No se pudo recuperar la información."
+  }
+}

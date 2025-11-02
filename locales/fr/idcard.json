@@ -1,0 +1,92 @@
+{
+  "title": {
+    "idCardManagement": "Gestion des Cartes d'Identité"
+  },
+  "button": {
+    "generateIdCards": "Générer les Cartes ID"
+  },
+  "tab": {
+    "students": "Élèves",
+    "teachers": "Professeurs"
+  },
+  "column": {
+    "select": "Sélectionner",
+    "id": "Nº",
+    "rollNo": "Nº de Rôle",
+    "studentName": "Nom de l'Élève",
+    "teacherName": "Nom du Professeur",
+    "class": "Classe",
+    "division": "Division",
+    "email": "E-mail",
+    "mobile": "Portable",
+    "gender": "Genre",
+    "actions": "Actions",
+    "role": "Rôle",
+    "status": "Statut"
+  },
+  "action": {
+    "viewDetails": "Voir Détails",
+    "generateIdCard": "Générer la Carte ID",
+    "selectAll": "Tout sélectionner",
+    "selected": "sélectionné"
+  },
+  "modal": {
+    "title": "Générer les Cartes d'Identité - {{entity}}",
+    "selectTemplate": "Sélectionner le Modèle de Carte ID",
+    "preview": "Aperçu ({{count}} enregistrement{{plural}}) sélectionné",
+    "noteBulk": "Note : {{count}} cartes d'identité seront générées. L'aperçu montre le premier enregistrement sélectionné.",
+    "noData": "Aucune donnée disponible pour l'aperçu",
+    "cancel": "Annuler",
+    "print": "Imprimer les Cartes ID",
+    "download": "Télécharger le PDF"
+  },
+  "messages": {
+    "fetchFailed": "Échec de la récupération des enregistrements sélectionnés",
+    "printSuccess": "Cartes d'identité envoyées à l'imprimante avec succès !",
+    "printFailed": "Échec de l'impression des cartes d'identité",
+    "downloadSuccess": "Cartes d'identité téléchargées avec succès !",
+    "downloadFailed": "Échec du téléchargement des cartes d'identité"
+  },
+  "processing": "Traitement...",
+  "generating": "Génération...",
+  "previewNoteTitle": "Remarque :",
+  "template": {
+    "modern": {
+      "name": "Design Moderne",
+      "desc": "Design épuré et contemporain aux couleurs vives"
+    },
+    "classic": {
+      "name": "Bordure Classique",
+      "desc": "Design traditionnel avec des bordures élégantes"
+    },
+    "minimal": {
+      "name": "Minimal Plat",
+      "desc": "Design plat simple et minimaliste"
+    },
+    "common": {
+      "student": "ÉLÈVE",
+      "faculty": "FACULTÉ",
+      "label": {
+        "rollNo": "Nº de Rôle",
+        "email": "E-mail",
+        "class": "Classe",
+        "role": "Rôle",
+        "dob": "Date de Naiss.",
+        "mobile": "Portable"
+      }
+    },
+    "info": {
+      "schoolName": "SUNSHINE HIGH SCHOOL",
+      "schoolSlogan": "L'excellence en éducation",
+      "classicSlogan": "Établ. 1985 • L'excellence en éducation",
+      "minimalSlogan": "Pôle d'Éducation Moderne"
+    }
+  },
+  "secondary": {
+    "description": "Gérez les cartes d'identité des étudiants et des enseignants avec des modèles professionnels"
+  },
+  "searchPlaceholder": {
+    "students": "Rechercher par Nom/Numéro/Roll/Email",
+    "teachers": "Rechercher par Nom/Email"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "student": {
+    "title": {
+      "add": "छात्र जोड़ें",
+      "edit": "छात्र संपादित करें"
+    },
+    "tabs": {
+      "details": "छात्र विवरण",
+      "documents": "दस्तावेज़"
+    },
+    "fields": {
+      "userName": "उपयोगकर्ता नाम",
+      "password": "पासवर्ड",
+      "firstName": "पहला नाम",
+      "lastName": "अंतिम नाम",
+      "mobile": "मोबाइल नंबर",
+      "email": "ईमेल",
+      "dateOfBirth": "जन्म तिथि",
+      "address": "पता",
+      "rollNo": "रोल नंबर",
+      "school": "स्कूल",
+      "class": "कक्षा",
+      "division": "विभाग",
+      "role": "भूमिका"
+    },
+    "validation": {
+      "emailRequired": "ईमेल आवश्यक है",
+      "emailInvalid": "एक वैध ईमेल होना चाहिए",
+      "passwordRequired": "पासवर्ड आवश्यक है",
+      "userNameRequired": "उपयोगकर्ता नाम आवश्यक है",
+      "firstNameRequired": "पहला नाम आवश्यक है",
+      "lastNameRequired": "अंतिम नाम आवश्यक है",
+      "mobileRequired": "मोबाइल नंबर आवश्यक है",
+      "mobileDigitsOnly": "मोबाइल नंबर केवल अंक होना चाहिए",
+      "mobileMin": "मोबाइल नंबर कम से कम 10 अंक का होना चाहिए",
+      "mobileMax": "मोबाइल नंबर 15 अंकों से अधिक नहीं हो सकता",
+      "rollNoRequired": "रोल नंबर आवश्यक है",
+      "dobRequired": "जन्म तिथि आवश्यक है",
+      "dobFuture": "जन्म तिथि भविष्य में नहीं हो सकती",
+      "classRequired": "कक्षा आवश्यक है",
+      "divisionRequired": "विभाग आवश्यक है",
+      "roleRequired": "भूमिका आवश्यक है"
+    },
+    "messages": {
+      "loading": "छात्र डेटा लोड हो रहा है...",
+      "fetchFailed": "छात्र डेटा लोड करने में विफल रहा।",
+      "updateSuccess": "छात्र सफलतापूर्वक अपडेट किया गया",
+      "createSuccess": "छात्र सफलतापूर्वक जोड़ा गया",
+      "saveError": "छात्र डेटा सहेजने में विफल रहा।"
+    },
+    "bulkUpload": {
+      "title": "थोक छात्र अपलोड",
+      "prompt": {
+        "selectSCD": "पहले स्कूल, कक्षा और विभाग का चयन करें। चयन के बाद, भरी हुई एक्सेल फ़ाइल अपलोड करें।",
+        "clickFile": "एक .xlsx फ़ाइल चुनने के लिए क्लिक करें",
+        "maxSize": "अधिकतम फ़ाइल आकार: 5एमबी",
+        "selectFileError": "कृपया अपलोड करने के लिए एक फ़ाइल चुनें।",
+        "selectSCDError": "अपलोड करने से पहले कृपया स्कूल, कक्षा और विभाग का चयन करें।"
+      },
+      "action": {
+        "downloadSample": "नमूना एक्सेल फ़ाइल डाउनलोड करें",
+        "downloading": "डाउनलोड हो रहा है...",
+        "upload": "अपलोड करें",
+        "uploading": "अपलोड हो रहा है...",
+        "close": "बंद करें"
+      },
+      "result": {
+        "summaryHeading": "अपलोड सारांश",
+        "createdUsers": "बनाए गए उपयोगकर्ता",
+        "successCount": "बनाए गए:",
+        "failCount": "विफल:",
+        "totalProcessed": "कुल संसाधित:",
+        "failureDetails": "विफलता विवरण",
+        "recordCreated": "बनाया गया",
+        "failed": "विफल",
+        "invalidFile": "कृपया एक वैध एक्सेल फ़ाइल (.xlsx) चुनें।",
+        "uploadFailed": "थोक अपलोड विफल रहा।"
+      },
+      "label": {
+        "school": "स्कूल",
+        "class": "कक्षा",
+        "division": "विभाग"
+      }
+    }
+  }
+}

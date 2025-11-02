@@ -1,0 +1,36 @@
+{
+  "menu": {
+    "masters": {
+      "groupTitle": "Maîtres",
+      "users": "Utilisateurs",
+      "teachers": "Enseignants",
+      "students": "Élèves",
+      "institutesCollapse": "Instituts",
+      "institutesItem": "Instituts",
+      "schools": "Écoles",
+      "classes": "Classes",
+      "divisions": "Divisions",
+      "subjects": "Matières",
+      "attendance": "Présence",
+      "studentAttendance": "Présence des Élèves",
+      "assignments": "Devoirs",
+      "roles": "Rôles",
+      "exams": "Examens",
+      "examsTeacherView": "Vue Enseignant",
+      "examsStudentView": "Vue Élève",
+      "timetables": "Emplois du Temps",
+      "idCards": "Cartes d'Identité",
+      "lms": "LMS",
+      "feeManagement": "Gestion des Frais",
+      "adminFeeDashboard": "Tableau de Bord des Frais Admin",
+      "myFees": "Mes Frais",
+      "documentHub": "Centre de Documents",
+      "notifications": "Notifications",
+      "quizTests": "Quiz et Tests",
+      "manageQuizzes": "Gérer les Quiz",
+      "availableQuizzes": "Quiz Disponibles",
+      "idCardManagement": "Gestion des Cartes d'Identité",
+      "leavingCertificateManagement": "Gestion des Certificats de Départ"
+    }
+  }
+}

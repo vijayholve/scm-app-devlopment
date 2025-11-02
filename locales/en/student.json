@@ -1,0 +1,86 @@
+{
+  "student": {
+    "title": {
+      "add": "Add Student",
+      "edit": "Edit Student"
+    },
+    "tabs": {
+      "details": "Student Details",
+      "documents": "Documents"
+    },
+    "fields": {
+      "userName": "User Name",
+      "password": "Password",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "mobile": "Mobile Number",
+      "email": "Email",
+      "dateOfBirth": "Date of Birth",
+      "address": "Address",
+      "rollNo": "Roll No",
+      "school": "School",
+      "class": "Class",
+      "division": "Division",
+      "role": "Role"
+    },
+    "validation": {
+      "emailRequired": "Email is required",
+      "emailInvalid": "Must be a valid email",
+      "passwordRequired": "Password is required",
+      "userNameRequired": "User Name is required",
+      "firstNameRequired": "First Name is required",
+      "lastNameRequired": "Last Name is required",
+      "mobileRequired": "Mobile number is required",
+      "mobileDigitsOnly": "Mobile number must be digits only",
+      "mobileMin": "Mobile number must be at least 10 digits",
+      "mobileMax": "Mobile number cannot exceed 15 digits",
+      "rollNoRequired": "Roll No is required",
+      "dobRequired": "Date of Birth is required",
+      "dobFuture": "Date of Birth cannot be in the future",
+      "classRequired": "Class is required",
+      "divisionRequired": "Division is required",
+      "roleRequired": "Role is required"
+    },
+    "messages": {
+      "loading": "Loading student data...",
+      "fetchFailed": "Failed to load student data.",
+      "updateSuccess": "Student updated successfully",
+      "createSuccess": "Student added successfully",
+      "saveError": "Failed to save student data."
+    },
+    "bulkUpload": {
+      "title": "Bulk Student Upload",
+      "prompt": {
+        "selectSCD": "Select School, Class and Division first. After selection, upload the filled Excel file.",
+        "clickFile": "Click to select an .xlsx file",
+        "maxSize": "Maximum file size: 5MB",
+        "selectFileError": "Please select a file to upload.",
+        "selectSCDError": "Please select School, Class and Division before uploading."
+      },
+      "action": {
+        "downloadSample": "Download Sample Excel File",
+        "downloading": "Downloading...",
+        "upload": "Upload",
+        "uploading": "Uploading...",
+        "close": "Close"
+      },
+      "result": {
+        "summaryHeading": "Upload Summary",
+        "createdUsers": "Created Users",
+        "successCount": "Created:",
+        "failCount": "Failed:",
+        "totalProcessed": "Total processed:",
+        "failureDetails": "Failure Details",
+        "recordCreated": "Created",
+        "failed": "Failed",
+        "invalidFile": "Please select a valid Excel file (.xlsx).",
+        "uploadFailed": "Bulk upload failed."
+      },
+      "label": {
+        "school": "School",
+        "class": "Class",
+        "division": "Division"
+      }
+    }
+  }
+}

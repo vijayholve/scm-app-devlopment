@@ -1,0 +1,458 @@
+{
+ "student": {
+    "title": {
+      "add": "Añadir Estudiante",
+      "edit": "Editar Estudiante"
+    },
+    "tabs": {
+      "details": "Detalles del Estudiante",
+      "documents": "Documentos"
+    },
+    "fields": {
+      "userName": "Nombre de Usuario",
+      "password": "Contraseña",
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "mobile": "Número de Móvil",
+      "email": "Correo Electrónico",
+      "dateOfBirth": "Fecha de Nacimiento",
+      "address": "Dirección",
+      "rollNo": "Número de Matrícula",
+      "school": "Escuela",
+      "class": "Clase",
+      "division": "División",
+      "role": "Rol"
+    },
+    "validation": {
+      "emailRequired": "El Correo Electrónico es obligatorio",
+      "emailInvalid": "Debe ser un correo electrónico válido",
+      "passwordRequired": "La Contraseña es obligatoria",
+      "userNameRequired": "El Nombre de Usuario es obligatorio",
+      "firstNameRequired": "El Nombre es obligatorio",
+      "lastNameRequired": "El Apellido es obligatorio",
+      "mobileRequired": "El Número de Móvil es obligatorio",
+      "mobileDigitsOnly": "El número de móvil debe contener solo dígitos",
+      "mobileMin": "El número de móvil debe tener al menos 10 dígitos",
+      "mobileMax": "El número de móvil no puede exceder 15 dígitos",
+      "rollNoRequired": "El Número de Matrícula es obligatorio",
+      "dobRequired": "La Fecha de Nacimiento es obligatoria",
+      "dobFuture": "La Fecha de Nacimiento no puede ser futura",
+      "classRequired": "La Clase es obligatoria",
+      "divisionRequired": "La División es obligatoria",
+      "roleRequired": "El Rol es obligatorio"
+    },
+    "messages": {
+      "loading": "Cargando datos del estudiante...",
+      "fetchFailed": "Fallo al cargar los datos del estudiante.",
+      "updateSuccess": "Estudiante actualizado con éxito",
+      "createSuccess": "Estudiante añadido con éxito",
+      "saveError": "Fallo al guardar los datos del estudiante."
+    },
+    "bulkUpload": {
+      "title": "Carga Masiva de Estudiantes",
+      "prompt": {
+        "selectSCD": "Primero seleccione Escuela, Clase y División. Luego, suba el archivo Excel rellenado.",
+        "clickFile": "Haga clic para seleccionar un archivo .xlsx",
+        "maxSize": "Tamaño máximo de archivo: 5MB",
+        "selectFileError": "Por favor, seleccione un archivo para subir.",
+        "selectSCDError": "Por favor, seleccione Escuela, Clase y División antes de subir."
+      },
+      "action": {
+        "downloadSample": "Descargar Archivo Excel de Ejemplo",
+        "downloading": "Descargando...",
+        "upload": "Subir",
+        "uploading": "Subiendo...",
+        "close": "Cerrar"
+      },
+      "result": {
+        "summaryHeading": "Resumen de Carga",
+        "createdUsers": "Usuarios Creados",
+        "successCount": "Creados:",
+        "failCount": "Fallidos:",
+        "totalProcessed": "Total procesado:",
+        "failureDetails": "Detalles de Fallo",
+        "recordCreated": "Creado",
+        "failed": "Fallido",
+        "invalidFile": "Por favor, seleccione un archivo Excel válido (.xlsx).",
+        "uploadFailed": "La carga masiva falló."
+      },
+      "label": {
+        "school": "Escuela",
+        "class": "Clase",
+        "division": "División"
+      }
+    }
+  },
+  "teacher": {
+    "title": {
+      "add": "Añadir Profesor/Personal",
+      "edit": "Editar Profesor/Personal"
+    },
+    "tabs": {
+      "basic": "Detalles Básicos",
+      "education": "Educación",
+      "allocation": "Asignación de Clases",
+      "documents": "Documentos"
+    },
+    "fields": {
+      "userName": "Nombre de Usuario",
+      "password": "Contraseña",
+      "firstName": "Nombre",
+      "middleName": "Segundo Nombre",
+      "lastName": "Apellido",
+      "mobile": "Móvil No",
+      "email": "Correo Electrónico",
+      "address": "Dirección",
+      "dob": "Fecha de Nacimiento",
+      "role": "Rol",
+      "gender": "Género",
+      "school": "Escuela",
+      "type": "Tipo",
+      "class": "Clase",
+      "division": "División"
+    },
+    "education": {
+      "heading": "Educación {0}",
+      "qualification": "Mayor Calificación",
+      "institution": "Nombre de Escuela/Colegio",
+      "board": "Nombre de Junta/Universidad",
+      "year": "Año de Egreso",
+      "percentage": "Porcentaje",
+      "noRecords": "No hay registros de educación. Agregue uno a continuación."
+    },
+    "action": {
+      "addEducation": "Añadir Educación",
+      "removeAllocation": "Eliminar",
+      "addAllocation": "Añadir Asignación"
+    },
+    "allocation": {
+      "noAllocations": "No se agregaron asignaciones.",
+      "addAllocation": "Añadir Asignación"
+    },
+    "validation": {
+      "emailRequired": "El Correo Electrónico es obligatorio",
+      "passwordRequired": "La Contraseña es obligatoria",
+      "hqRequired": "La Mayor Calificación es obligatoria",
+      "institutionRequired": "El Nombre de Escuela/Colegio es obligatorio",
+      "boardRequired": "El Nombre de Junta/Universidad es obligatorio",
+      "yearRequired": "El Año de Egreso es obligatorio",
+      "yearTypeError": "El Año de Egreso debe ser un número",
+      "percentageRequired": "El Porcentaje es obligatorio",
+      "percentageTypeError": "El Porcentaje debe ser un número",
+      "percentageRange": "El Porcentaje debe estar entre 0 y 100",
+      "yearInvalid": "El Año debe ser actual o pasado"
+    },
+    "messages": {
+      "loading": "Cargando datos de Profesor/Personal...",
+      "updateSuccess": "Profesor actualizado con éxito",
+      "createSuccess": "Profesor creado con éxito",
+      "saveError": "Fallo al enviar datos del profesor."
+    }
+  },"documentManager": {
+    "title": "Documentos de Usuario",
+    "addModalTitle": "Añadir Nuevo Documento",
+    "table": {
+      "name": "Nombre del Documento",
+      "uploadedOn": "Subido el",
+      "actions": "Acciones",
+      "noDocuments": "No se encontraron documentos para este usuario."
+    },
+    "action": {
+      "add": "Añadir Documento",
+      "download": "Descargar",
+      "delete": "Eliminar",
+      "save": "Guardar",
+      "cancel": "Cancelar",
+      "selectFile": "Seleccionar Archivo"
+    },
+    "form": {
+      "documentNameLabel": "Nombre del Documento"
+    },
+    "messages": {
+      "uploading": "Subiendo...",
+      "downloadingLoader": "Cargando para Descargar Documento",
+      "maxFileSizeError": "El archivo es demasiado grande (máx. 5MB).",
+      "requiredError": "Por favor, proporcione un nombre de documento y seleccione un archivo.",
+      "uploadSuccess": "¡Documento subido con éxito!",
+      "uploadFailed": "Fallo al subir el documento. Por favor, inténtelo de nuevo.",
+      "downloadFailed": "Error al descargar el archivo.",
+      "deleteConfirm": "¿Está seguro de que desea eliminar este documento?",
+      "deleteSuccess": "¡Documento eliminado con éxito!"
+    }
+  },
+  "role": {
+    "title": { "add": "Agregar Rol", "edit": "Editar Rol" },
+    "fields": { "name": "Nombre del Rol", "permissions": "Permisos", "school": "Escuela" },
+    "messages": {
+      "fetchFailed": "Error al obtener los datos iniciales.",
+      "createSuccess": "¡Rol creado con éxito!",
+      "updateSuccess": "¡Rol actualizado con éxito!",
+      "saveFailed": "Error al guardar el rol.",
+      "createLabel": "Crear",
+      "updateLabel": "Actualizar"
+    },
+    "table": { "entity": "Entidad" },
+    "actions": { "add": "Agregar", "edit": "Editar", "view": "Ver", "delete": "Eliminar" },
+    "headings": { "configurePermissions": "Configurar Permisos" }
+  },
+  "class": {
+    "title": { "add": "Agregar Clase", "edit": "Editar Clase" },
+    "fields": { "name": "Nombre de la Clase", "school": "Escuela", "institute": "Instituto" },
+    "messages": {
+      "loading": "Cargando clase...",
+      "savedAdd": "¡Clase agregada con éxito!",
+      "savedUpdate": "¡Clase actualizada con éxito!",
+      "duplicate": "Este nombre de clase ya existe para la escuela seleccionada.",
+      "instituteRequired": "Se requiere instituto",
+      "schoolRequired": "Se requiere escuela",
+      "saveLabel": "Guardar",
+      "updateLabel": "Actualizar",
+      "unexpectedError": "Ocurrió un error inesperado. Por favor, inténtelo de nuevo.",
+      "saveFailed": "No se pudo guardar la clase. Por favor, inténtelo de nuevo."
+    }
+  },
+  "course": {
+    "title": { "add": "Agregar Curso", "edit": "Editar Curso" },
+    "fields": { "name": "Nombre del Curso", "description": "Descripción", "school": "Escuela" }
+  },
+ "school": {
+    "title": {
+      "add": "Agregar Escuela",
+      "edit": "Editar Escuela"
+    },
+    "label": {
+      "name": "Nombre de la Escuela",
+      "institute": "Instituto",
+      "address1": "Línea de Dirección 1",
+      "address2": "Línea de Dirección 2",
+      "city": "Ciudad",
+      "state": "Estado",
+      "zipCode": "Código Postal",
+      "mobile": "Número de Móvil",
+      "telephone": "Número de Teléfono",
+      "email": "Correo Electrónico",
+      "code": "Código de Escuela",
+      "selectInstitute": "Seleccionar un Instituto"
+    },
+    "validation": {
+      "nameRequired": "El Nombre de la Escuela es obligatorio",
+      "instituteRequired": "El Instituto es obligatorio",
+      "address1Required": "La Línea de Dirección 1 es obligatoria",
+      "cityRequired": "La Ciudad es obligatoria",
+      "stateRequired": "El Estado es obligatorio",
+      "zipCodeRequired": "El Código Postal es obligatorio",
+      "zipCodeInvalid": "Debe ser un código postal válido",
+      "mobileRequired": "El Número de Móvil es obligatorio",
+      "mobileInvalid": "Ingrese un número de móvil válido de 10 dígitos",
+      "telephoneRequired": "El Número de Teléfono es obligatorio",
+      "telephoneInvalid": "Ingrese un número de teléfono válido (ej: 020-12345678)",
+      "emailRequired": "El Correo Electrónico es obligatorio",
+      "emailInvalid": "Debe ser un correo electrónico válido",
+      "codeRequired": "El Código de Escuela es obligatorio"
+    },
+    "action": {
+      "save": "Guardar",
+      "update": "Actualizar"
+    },
+    "messages": {
+      "fetchInstitutesFailed": "No se pudieron obtener los institutos.",
+      "fetchFailed": "No se pudieron obtener los datos de la escuela.",
+      "updateSuccess": "¡Escuela actualizada exitosamente!",
+      "createSuccess": "¡Escuela creada exitosamente!",
+      "saveError": "Ocurrió un error al guardar la escuela. Por favor, inténtelo de nuevo."
+    }
+  },
+"subject": {
+    "title": {
+      "add": "Agregar Asignatura",
+      "edit": "Editar Asignatura"
+    },
+    "label": {
+      "name": "Nombre de la Asignatura",
+      "code": "Código de Asignatura",
+      "school": "Seleccionar Escuela"
+    },
+    "validation": {
+      "nameRequired": "El nombre es obligatorio",
+      "schoolRequired": "La escuela es obligatoria"
+    },
+    "messages": {
+      "loading": "Cargando datos de la asignatura...",
+      "updateSuccess": "Asignatura guardada con éxito!",
+      "saveError": "Fallo al guardar la asignatura. Por favor, inténtelo de nuevo."
+    }
+  },
+  "assignment": {
+    "title": { "add": "Agregar Tarea", "edit": "Editar Tarea" },
+    "fields": { "name": "Nombre", "deadline": "Fecha Límite", "subject": "Asignatura", "message": "Mensaje" },
+    "messages": {
+      "loading": "Cargando tarea...",
+      "saved": "Tarea guardada con éxito",
+      "uploadTitle": "📁 Subir archivo de la tarea",
+      "uploadSubtitle": "Haga clic para seleccionar el archivo o arrástrelo",
+      "submissionsTitle": { "student": "📋 Mis envíos y comentarios del profesor", "teacher": "📋 Todos los envíos de estudiantes" },
+      "submissionsSubtitle": {
+        "student": "Ver su trabajo enviado y los comentarios del profesor",
+        "teacher": "Revisar y calificar los envíos de los estudiantes"
+      },
+      "table": {
+        "studentId": "👤 ID del estudiante",
+        "submittedFile": "📄 Archivo enviado",
+        "submissionDate": "📅 Fecha de envío",
+        "download": "👁️ Descargar",
+        "status": "⭐ Estado",
+        "feedback": "💬 Comentarios",
+        "actions": "🔧 Acciones"
+      },
+      "download": "Descargar",
+      "downloadAssignment": "Descargar tarea",
+      "pending": "Pendiente",
+      "na": "N/A",
+      "noFeedbackYet": "Aún no hay comentarios",
+      "enterFeedback": "Ingrese comentarios",
+      "accept": "Aceptar",
+      "reject": "Rechazar",
+      "deleteConfirmation": "¿Está seguro de que desea eliminar esta entrega?",
+      "toast": {
+        "submissionUpdated": "Entrega actualizada",
+        "submissionUpdateFailed": "Error al actualizar la entrega",
+        "submissionDeleted": "Entrega eliminada",
+        "submissionDeleteFailed": "Error al eliminar la entrega"
+      },
+      "empty": {
+        "student": "Aún no ha enviado ningún trabajo para esta tarea.",
+        "teacher": "No se encontraron envíos de estudiantes para esta tarea."
+      }
+    }
+  },
+  "division": {
+    "title": { "add": "Agregar División", "edit": "Editar División" },
+    "fields": { "name": "Nombre de la División", "code": "Código de la División" },
+    "messages": {
+      "loading": "Cargando división...",
+      "saved": "División guardada con éxito",
+      "saveLabel": "Guardar",
+      "updateLabel": "Actualizar"
+    }
+  },
+  "attendance": {
+    "title": { "add": "Agregar Asistencia", "edit": "Editar Asistencia" },
+    "fields": { "date": "Fecha", "class": "Clase", "division": "División", "subject": "Asignatura" },
+    "messages": {
+      "selectPlaceholder": "Seleccione Clase, División y Asignatura",
+      "updated": "Asistencia actualizada con éxito"
+    }
+  },
+  "exam": {
+    "title": { "add": "Agregar Examen", "edit": "Editar Examen" },
+    "fields": {
+      "school": "Escuela",
+      "class": "Clase",
+      "division": "División",
+      "examName": "Nombre del Examen",
+      "academicYear": "Año Académico",
+      "examType": "Tipo de Examen",
+      "startDate": "Fecha de Inicio",
+      "endDate": "Fecha de Fin",
+      "subject": "Asignatura",
+      "quiz": "Quiz",
+      "maxMarks": "Calificación Máxima",
+      "passingMarks": "Puntos de Aprobación",
+      "duration": "Duración (Minutos)",
+      "examDateTime": "Fecha y Hora del Examen",
+      "totalMarks": "Puntuación Total"
+    },
+    "headings": {
+      "examSubjects": "Asignaturas del Examen"
+    },
+    "validation": {
+      "schoolRequired": "La escuela es obligatoria",
+      "classRequired": "La clase es obligatoria",
+      "divisionRequired": "La división es obligatoria",
+      "examNameRequired": "El nombre del examen es obligatorio",
+      "academicYearRequired": "El año académico es obligatorio",
+      "examTypeRequired": "El tipo de examen es obligatorio",
+      "startDateRequired": "La fecha de inicio es obligatoria",
+      "endDateRequired": "La fecha de fin es obligatoria",
+      "subjectRequired": "La asignatura es obligatoria",
+      "quizRequired": "El quiz es obligatorio",
+      "maxMarksNumber": "La calificación máxima debe ser un número",
+      "maxMarksRequired": "La calificación máxima es obligatoria",
+      "minOne": "Debe ser al menos 1",
+      "passingMarksNumber": "Los puntos de aprobación deben ser un número",
+      "passingMarksRequired": "Los puntos de aprobación son obligatorios",
+      "minZero": "Debe ser al menos 0",
+      "durationNumber": "La duración debe ser un número",
+      "durationRequired": "La duración es obligatoria",
+      "examDateTimeRequired": "La fecha y hora del examen son obligatorias",
+      "atLeastOne": "Se requiere al menos una asignatura"
+    },
+    "messages": {
+      "loading": "Cargando Examen...",
+      "fetchError": "Error al obtener los detalles del examen.",
+      "created": "¡Examen creado con éxito!",
+      "createFailed": "Error al crear el examen.",
+      "updated": "¡Examen actualizado con éxito!",
+      "updateFailed": "Error al actualizar el examen.",
+      "createLabel": "Crear Examen",
+      "updateLabel": "Actualizar Examen"
+    }
+  },
+  "timetable": {
+    "title": { "add": "Agregar Horario", "edit": "Editar Horario" },
+    "fields": { "school": "Escuela", "class": "Clase", "division": "División", "dayTimeTable": "Horario del Día" }
+  },
+  "institute": {
+    "title": { "add": "Agregar Instituto", "edit": "Editar Instituto" },
+    "fields": {
+      "id": "ID",
+      "name": "Nombre del Instituto",
+      "address": "Dirección",
+      "addressLine2": "Dirección Línea 2",
+      "city": "Ciudad",
+      "state": "Estado",
+      "zipCode": "Código Postal",
+      "mobileNumber": "N° de Móvil",
+      "email": "Correo Electrónico",
+      "faxNumber": "N° de Fax",
+      "code": "Código"
+    },
+    "messages": {
+      "loading": "Cargando Instituto...",
+      "fetchFailed": "Error al obtener los datos del instituto.",
+      "nameExists": "Este nombre de instituto ya existe.",
+      "createSuccess": "Instituto creado con éxito!",
+      "updateSuccess": "Instituto actualizado con éxito!",
+      "saveFailed": "Error al guardar el instituto. Por favor, inténtelo de nuevo.",
+      "updateLabel": "Actualizar"
+    },
+    "validation": {
+      "addressRequired": "La dirección es obligatoria",
+      "cityRequired": "La ciudad es obligatoria",
+      "stateRequired": "El estado es obligatorio",
+      "zipCodeInvalid": "Debe ser un código postal válido",
+      "zipCodeRequired": "El código postal es obligatorio",
+      "mobileInvalid": "El número de móvil debe tener 10 dígitos",
+      "mobileRequired": "El número de móvil es obligatorio",
+      "faxRequired": "El número de fax es obligatorio",
+      "codeRequired": "El código es obligatorio"
+    }
+  },
+  "studentParent": {
+    "title": { "add": "Agregar Estudiante/Padre", "edit": "Editar Estudiante/Padre" },
+    "fields": { "name": "Nombre", "mobile": "N° de Móvil", "email": "Correo Electrónico" }
+  },
+  "notifications": {
+    "title": { "create": "Crear Notificación", "edit": "Editar Notificación" },
+    "fields": { "title": "Título", "message": "Mensaje", "sendTo": "Enviar a" }
+  },
+  "common": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "loading": "Cargando...",
+    "required": "Este campo es obligatorio",
+    "invalidEmail": "Debe ser un correo electrónico válido",
+    "dateInFuture": "La fecha no puede ser en el futuro"
+  }
+}

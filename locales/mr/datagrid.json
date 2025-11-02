@@ -1,0 +1,94 @@
+{
+  "header": {
+    "actions": "कृती",
+    "totalOrder": "एकूण मागणी",
+    "totalIncome": "एकूण उत्पन्न"
+  },
+  "tooltip": {
+    "viewDetails": "तपशील पहा",
+    "enroll": "नावनोंदणी करा",
+    "edit": "संपादित करा",
+    "delete": "हटवा",
+    "viewSubjects": "विषय पहा",
+    "viewSchedule": "वेळापत्रक पहा"
+  },
+  "action": {
+    "refresh": "रीफ्रेश करा",
+    "viewMore": "अधिक दाखवा",
+    "viewAll": "सर्व पहा",
+    "saveAll": "सर्व जतन करा"
+  },
+  "search": {
+    "placeholder": "काहीही शोधा...",
+    "filtersActive": "फिल्टर सक्रिय"
+  },
+  "filter": {
+    "selectSchool": "शाळा निवडा",
+    "selectClass": "वर्ग निवडा",
+    "selectDivision": "विभाग निवडा",
+    "allSchools": "सर्व शाळा",
+    "allClasses": "सर्व वर्ग",
+    "allDivisions": "सर्व विभाग",
+    "clear": "साफ करा",
+    "all": "सर्व"
+  },
+"columnHeader": {
+    "id": "आयडी",
+    "name": "नाव",
+    "rollNo": "रोल नंबर",
+    "userName": "वापरकर्ता नाव",
+    "firstName": "पहिले नाव",
+    "lastName": "आडनाव",
+    "email": "ईमेल",
+    "mobile": "मोबाईल क्रमांक",
+    "code": "कोड",
+    "address": "पत्ता",
+    "status": "स्थिती",
+    "subjectCode": "विषय कोड",
+
+    "school": "शाळा",
+    "schoolName": "शाळेचे नाव",
+    "class": "वर्ग",
+    "className": "वर्गाचे नाव",
+    "division": "विभाग",
+    "divisionName": "विभागाचे नाव",
+    "subject": "विषय",
+    "documentName": "दस्तऐवजाचे नाव",
+    "instituteName": "संस्था",
+    "instituteId": "संस्थेचा आयडी",
+
+    "select": "निवडा",
+    "gender": "लिंग",
+    "actions": "क्रिया",
+    "faxNumber": "फॅक्स क्रमांक",
+    "attendanceDate": "उपस्थितीची तारीख",
+
+    "examName": "परीक्षेचे नाव",
+    "examType": "परीक्षेचा प्रकार",
+    "year": "वर्ष",
+    "totalMark": "एकूण गुण",
+    "showScore": "गुण दाखवा",
+
+    "yes": "होय",
+    "no": "नाही",
+    "total": "एकूण",
+    "paid": "भरले",
+    "pending": "प्रलंबित",
+    "feeName": "फीचे नाव",
+    "title": "शीर्षक",
+    "description": "वर्णन",
+    "createdBy": "द्वारे तयार केले",
+    "deadLine": "अंतिम मुदत",
+    "startDate": "सुरू होण्याची तारीख",
+    "startTime": "सुरू होण्याची वेळ",
+    "endTime": "समाप्तीची वेळ"
+},
+  "confirm": {
+    "deleteItem": "आपण ही वस्तू हटवू इच्छिता याची खात्री आहे?"
+  },
+  "toast": {
+    "deleteSuccess": "वस्तू यशस्वीरित्या हटवली!",
+    "deleteFail": "वस्तू हटविण्यात अयशस्वी.",
+    "fetchFail": "डेटा मिळू शकला नाही."
+  }
+}

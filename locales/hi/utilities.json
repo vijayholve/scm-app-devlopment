@@ -1,0 +1,36 @@
+{
+  "menu": {
+    "masters": {
+      "groupTitle": "मास्टर्स",
+      "users": "उपयोगकर्ता",
+      "teachers": "शिक्षक",
+      "students": "छात्र",
+      "institutesCollapse": "संस्थान",
+      "institutesItem": "संस्थान",
+      "schools": "स्कूल",
+      "classes": "कक्षाएं",
+      "divisions": "विभाग",
+      "subjects": "विषय",
+      "attendance": "उपस्थिति",
+      "studentAttendance": "छात्र उपस्थिति",
+      "assignments": "असाइनमेंट",
+      "roles": "भूमिकाएँ",
+      "exams": "परीक्षाएँ",
+      "examsTeacherView": "शिक्षक दृश्य",
+      "examsStudentView": "छात्र दृश्य",
+      "timetables": "समय सारणी",
+      "idCards": "आईडी कार्ड",
+      "lms": "एलएमएस",
+      "feeManagement": "शुल्क प्रबंधन",
+      "adminFeeDashboard": "व्यवस्थापक शुल्क डैशबोर्ड",
+      "myFees": "मेरा शुल्क",
+      "documentHub": "दस्तावेज़ केंद्र",
+      "notifications": "सूचनाएं",
+      "quizTests": "क्विज़ और टेस्ट",
+      "manageQuizzes": "क्विज़ प्रबंधित करें",
+      "availableQuizzes": "उपलब्ध क्विझ",
+            "leavingCertificateManagement": "छोड़ने का प्रमाणपत्र प्रबंधन"
+
+    }
+  }
+}

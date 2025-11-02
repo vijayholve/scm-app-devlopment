@@ -1,0 +1,277 @@
+{
+  "title": {
+    "courseManagement": "Courses Management",
+    "myCourses": "My Courses",
+    "editCourse": "Edit Course",
+    "createCourse": "Create Course",
+    "addNewLesson": "Add New Lesson",
+    "editLesson": "Edit Lesson",
+    "addNewModule": "Add New Module",
+    "editModule": "Edit Module"
+  },
+  "common": {
+    "progress": "Progress",
+    "loadingCourses": "Loading courses...",
+    "status": "Status",
+    "selectStatus": "Select Status",
+    "noImage": "No Image",
+    "percentComplete": "{0}% complete",
+    "sections": "{0} sections",
+    "lectures": "{0} lectures",
+    "minutesTotalLength": "{0} total length"
+  },
+  "status": {
+    "completed": "Completed",
+    "inProgress": "In Progress",
+    "active": "Active",
+    "inactive": "Inactive",
+    "draft": "Draft",
+    "locked": "Locked",
+    "enrolled": "✓ Enrolled",
+    "completedLesson": "Completed",
+    "showcaseEnrolled": "ENROLLED"
+  },
+  "action": {
+    "enrollInCourses": "Enroll in Courses",
+    "enroll": "Enroll",
+    "enrollTooltip": "Enroll in this course",
+    "viewDetails": "View Details",
+    "clearFilters": "Clear Filters",
+    "enrollToAccess": "Enroll to Access",
+    "downloadDocument": "Download Document",
+    "downloadDocumentBtn": "Download Document",
+    "expandAll": "Expand all sections",
+    "enrollNow": "Enroll Now",
+    "enrolling": "Enrolling...",
+    "viewCourse": "View course",
+    "save": "Save",
+    "cancel": "Cancel",
+    "addModule": "Add Module",
+    "addLesson": "Add Lesson",
+    "change": "Change",
+    "upload": "Upload",
+    "remove": "Remove",
+    "adding": "Adding...",
+    "exploreCourses": "Explore Courses",
+    "startLearningToday": "Start Learning Today",
+    "getStarted": "Get Started",
+    "browseCourses": "Browse Courses",
+    "viewDashboard": "View Dashboard",
+    "myCourses": "My Courses",
+    "exploreMore": "Explore More",
+    "continueLearning": "Continue Learning",
+    "startLearningNow": "Start Learning Now",
+    "exploreFeatures": "Explore Features",
+    "viewAllCourses": "View All Courses",
+    "showcaseContinue": "Continue Learning",
+    "startTest": "Start Test",
+    "login": "Login",
+    "signUp": "Sign Up",
+    "logout": "Logout",
+    "preparing": "Preparing..."
+  },
+  "error": {
+    "loadFailed": "Failed to load courses. Please try again later.",
+    "downloadFailed": "Failed to download document.",
+    "courseNotFound": "Course not found or failed to load.",
+    "enrollRequired": "Please enroll to access lesson content.",
+    "enrollmentRequired": "Enrollment required",
+    "enrollmentContentLock": "You must enroll to access this course content.",
+    "lessonTitleRequired": "Lesson title is required.",
+    "addLessonFailed": "Failed to add lesson. Please try again.",
+    "moduleTitleRequired": "Module title is required.",
+    "addModuleFailed": "Failed to add module. Please try again.",
+    "loadQuizzesFailed": "Failed to load quizzes for selected criteria.",
+    "loadDocumentsFailed": "Failed to load documents for selected criteria."
+  },
+  "success": {
+    "quizzesLoaded": "Quizzes loaded successfully!"
+  },
+  "info": {
+    "noQuizzesFound": "No quizzes found for the selected criteria."
+  },
+  "course": {
+    "id": "ID",
+    "title": "Title",
+    "school": "School",
+    "class": "Class",
+    "division": "Division",
+    "status": "Status",
+    "courseTitle": "Course Title",
+    "description": "Description",
+    "headerBanner": "Header Banner",
+    "courseBanner": "Course Banner",
+    "modules": "Modules",
+    "noModulesAdded": "No modules added yet.",
+    "whatYoullLearn": "What you'll learn",
+    "content": "Course content",
+    "includes": "This course includes:",
+    "certificate": "Certificate of completion",
+    "instructor": "Instructor",
+    "instructorRating": "Instructor Rating",
+    "modulesAndLessons": "Modules & Lessons",
+    "enrolledStudents": "Enrolled Students",
+    "noStudentsEnrolled": "No students enrolled.",
+    "instructorPrefix": "Instructor: {0}",
+    "outline": "Course Outline",
+    "noModulesFound": "No modules found for this course.",
+    "enrolledStudentsCount": "Enrolled Students ({0})",
+    "contentSummary": "{0} sections • {1} lectures • {2} total length"
+  },
+  "lesson": {
+    "title": "Lesson Title",
+    "content": "Content",
+    "type": "Lesson Type",
+    "selectType": "Select Type",
+    "link": "Link",
+    "selectDocument": "Select Document",
+    "selectTest": "Select Test",
+    "loadingTests": "Loading Tests...",
+    "noLessonsAdded": "No lessons added.",
+    "selectToView": "Select a lesson to view its content.",
+    "noVideoLink": "No video link provided.",
+    "noTextContent": "No specific content provided for this text lesson.",
+    "documentDownloadPrompt": "Click below to download the associated document.",
+    "assessmentInfo": "This lesson is an assessment.",
+    "types": {
+      "video": "Video",
+      "document": "Document",
+      "reading": "Reading",
+      "quiz": "Quiz",
+      "assessment": "Assessment",
+      "text": "Text"
+    },
+    "preview": "Preview"
+  },
+  "module": {
+    "title": "Module Title",
+    "description": "Description",
+    "lessons": "Lessons",
+    "noLessonsAdded": "No lessons added."
+  },
+  "catalog": {
+    "header": "Explore Our Courses",
+    "subheader": "Discover new skills and advance your career with our expert-led courses",
+    "searchPlaceholder": "Search courses...",
+    "category": "Category",
+    "allCategories": "All Categories",
+    "level": "Level",
+    "allLevels": "All Levels",
+    "price": "Price",
+    "allPrices": "All Prices",
+    "summary": "Showing {0} of {1} courses",
+    "noCoursesFound": "No courses found matching your criteria"
+  },
+  "price": {
+    "free": "Free",
+    "paid": "Paid",
+    "premium": "Premium"
+  },
+  "showcase": {
+    "enrolledTitle": "My Enrolled Courses ({0})",
+    "featuredTitle": {
+      "guest": "Featured Courses",
+      "user": "Recommended for You",
+      "enrolled": "Discover More Courses"
+    }
+  },
+  "hero": {
+    "guestTitle": "Learn Without Limits",
+    "guestSubtitle": "Discover thousands of courses and advance your skills with our comprehensive learning platform",
+    "userTitle": "Welcome Back!",
+    "userSubtitle": "Continue your learning journey and discover new courses tailored just for you",
+    "enrolledTitle": "Continue Learning",
+    "enrolledSubtitle": "Pick up where you left off and keep progressing in your enrolled courses"
+  },
+  "cta": {
+    "enrolledTitle": "Continue Your Learning Journey",
+    "enrolledDescription": "Pick up where you left off and master new skills with our comprehensive course library.",
+    "guestTitle": "Transform Your Career Today",
+    "guestDescription": "Join thousands of learners who have advanced their careers through our expertly crafted courses.",
+    "whiteTitle": "Why Choose Our Platform?",
+    "whiteSubtitle": "Built for Modern Learners",
+    "whiteDescription": "Our cutting-edge learning management system is designed to provide the best educational experience with innovative features and tools."
+  },
+  "feature": {
+    "expertCoursesTitle": "Expert-Led Courses",
+    "expertCoursesDesc": "Learn from industry professionals with years of experience",
+    "trackProgressTitle": "Track Progress",
+    "trackProgressDesc": "Monitor your learning journey with detailed analytics",
+    "communityTitle": "Community Support",
+    "communityDesc": "Connect with fellow learners and instructors"
+  },
+  "valueProp": {
+    "header": "Structured Learning for Real Results",
+    "feature1": {
+      "title": "Modular Curriculum",
+      "desc": "Bite-sized, practical lessons covering every koolERP module from basic navigation to advanced configuration."
+    },
+    "feature2": {
+      "title": "Hands-On Practice",
+      "desc": "Access to live sandbox environments to practice system configurations and real-world transactions immediately."
+    },
+    "feature3": {
+      "title": "Accredited Experts",
+      "desc": "Train with certified instructors who have years of experience implementing and managing koolERP globally."
+    }
+  },
+  "about": {
+    "header": "About Our Learning Platform",
+    "subheader": "Empowering learners worldwide with accessible, high-quality education",
+    "missionTitle": "Our Mission",
+    "missionText": "To democratize education by providing accessible, high-quality learning experiences that empower individuals to achieve their personal and professional goals, regardless of their background or circumstances.",
+    "stat": {
+      "courses": "Courses Available",
+      "students": "Active Students",
+      "instructors": "Expert Instructors",
+      "certificates": "Certificates Issued"
+    },
+    "storyTitle": "Our Story",
+    "valuesTitle": "Our Values",
+    "value1": {
+      "title": "Quality Education"
+    },
+    "value2": {
+      "title": "Accessibility"
+    },
+    "value3": {
+      "title": "Innovation"
+    },
+    "value4": {
+      "title": "Community"
+    },
+    "teamTitle": "Meet Our Team"
+  },
+  "nav": {
+    "home": "Home",
+    "courses": "Courses",
+    "about": "About",
+    "dashboard": "Dashboard",
+    "lightMode": "Switch to Light Mode",
+    "darkMode": "Switch to Dark Mode"
+  },
+  "footer": {
+    "platform": "Platform",
+    "support": "Support",
+    "legal": "Legal",
+    "followUs": "Follow Us",
+    "browseCourses": "Browse Courses",
+    "aboutUs": "About Us",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "helpCenter": "Help Center",
+    "community": "Community",
+    "documentation": "Documentation",
+    "systemStatus": "System Status",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookiePolicy": "Cookie Policy",
+    "gdpr": "GDPR",
+    "tagline": "Empowering learners worldwide with cutting-edge education technology and expert-led courses.",
+    "email": "contact@koolerp.com",
+    "phone": "+91 91588 06129",
+    "address": "Pune, India",
+    "madeWithLove": "Made with ❤️ for learners worldwide",
+    "copyright": "© 2024 KoolERP. All rights reserved."
+  }
+}

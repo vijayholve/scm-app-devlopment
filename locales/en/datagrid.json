@@ -1,0 +1,93 @@
+{
+  "header": {
+    "actions": "Actions",
+    "totalOrder": "Total Order",
+    "totalIncome": "Total Income"
+  },
+  "tooltip": {
+    "viewDetails": "View Details",
+    "enroll": "Enroll",
+    "edit": "Edit",
+    "delete": "Delete",
+    "viewSubjects": "View Subjects",
+    "viewSchedule": "View Schedule"
+  },
+  "action": {
+    "refresh": "Refresh",
+    "viewMore": "Show more",
+    "viewAll": "View All",
+    "saveAll": "Save All"
+  },
+  "search": {
+    "placeholder": "Search anything...",
+    "filtersActive": "filters active"
+  },
+  "filter": {
+    "selectSchool": "Select School",
+    "selectClass": "Select Class",
+    "selectDivision": "Select Division",
+    "allSchools": "All Schools",
+    "allClasses": "All Classes",
+    "allDivisions": "All Divisions",
+    "clear": "Clear",
+    "all": "All"
+  },
+  "columnHeader": {
+    "id": "ID",
+    "name": "Name",
+    "rollNo": "Roll No",
+    "userName": "User Name",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "mobile": "Mobile Number",
+    "code": "Code",
+    "address": "Address",
+    "status": "Status",
+    "subjectCode": "Subject Code",
+    
+    "school": "School",
+    "schoolName": "School Name",
+    "class": "Class",
+    "className": "Class Name",
+    "division": "Division",
+    "divisionName": "Division Name",
+    "subject": "Subject",
+    "documentName": "Document Name",
+    "instituteName": "Institute",
+    "instituteId": "Institute ID",
+    "yes": "Yes",
+    "no": "No",
+    "select": "Select",
+    "gender": "Gender",
+    "actions": "Actions",
+    "faxNumber": "Fax Number",
+    "attendanceDate": "Attendance Date",
+    
+    "examName": "Exam Name",
+    "examType": "Exam Type",
+    "year": "Year",
+    "totalMark": "Total Mark",
+    "showScore": "Show Score",
+    
+    "total": "Total",
+    "paid": "Paid",
+    "pending": "Pending",
+    "feeName": "Fee Name",
+    "title": "Title",
+    "description": "Description",
+    "createdBy": "Created By",
+    "deadLine": "Deadline",
+    "startDate": "Start Date",
+    "startTime": "Start Time",
+    "endTime": "End Time"
+},
+  "confirm": {
+    "deleteItem": "Are you sure you want to delete this item?"
+  },
+  "toast": {
+    "deleteSuccess": "Item deleted successfully!",
+    "deleteFail": "Failed to delete item.",
+    "fetchFail": "Could not fetch data."
+  }
+}

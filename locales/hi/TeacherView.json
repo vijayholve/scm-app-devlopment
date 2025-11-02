@@ -1,0 +1,50 @@
+{
+  "title": "परीक्षाओं को ग्रेड दें",
+  "gradeExamTitle": "परीक्षा को ग्रेड दें",
+  "filters": {
+    "selectSchool": "स्कूल चुनें",
+    "selectClass": "कक्षा चुनें",
+    "selectDivision": "डिवीजन चुनें",
+    "selectExam": "परीक्षा चुनें"
+  },
+  "dataGrid": {
+    "studentName": "छात्र का नाम",
+    "actions": "कार्य",
+    "saveAll": "सभी सहेजें",
+    "placeholderMarks": "अंक"
+  },
+  "gradingView": {
+    "titlePrefix": "ग्रेडिंग",
+    "tabEnterMarks": "अंक दर्ज करें",
+    "tabViewPaperAnswers": "पेपर और उत्तर देखें",
+    "tabViewQuizResult": "क्विज परिणाम देखें",
+    "tabUploadPaper": "पेपर अपलोड करें",
+    "marksHeading": "अंक दर्ज करें (अधिकतम {{maxMarks}} में से)",
+    "saveMarks": "अंक सहेजें",
+    "back": "वापस",
+    "questionAnswerTitle": "प्रश्न पत्र और छात्र के उत्तर",
+    "placeholderViewText": "यह {{subjectName}} परीक्षा के लिए एक प्लेसहोल्डर दृश्य है।",
+    "studentAnswer": "{{studentName}} का उत्तर: {{answer}}",
+    "questionPrefix": "प्रश्न:",
+    "uploadPaperTitle": "परीक्षा पेपर अपलोड करें",
+    "selectFileLabel": "अपलोड करने के लिए एक फ़ाइल चुनें",
+    "uploadButton": "पेपर अपलोड करें",
+    "uploadingButton": "अपलोड हो रहा है...",
+    "noQuestionFound": "इस विषय के लिए कोई प्रश्न नहीं मिला।",
+    "noAnswerSubmitted": "कोई उत्तर सबमिट नहीं किया गया।"
+  },
+  "toasts": {
+    "loadExamsFail": "परीक्षा लोड करने में विफल रहा",
+    "marksExceeded": "अंक {{maxMarks}} से अधिक नहीं हो सकते।",
+    "saveMarksSuccess": "{{studentName}} के लिए अंक सफलतापूर्वक सहेजे गए!",
+    "saveMarksFail": "अंक सहेजने में विफल रहा। कृपया पुनः प्रयास करें।",
+    "selectFileToUpload": "कृपया अपलोड करने के लिए एक फ़ाइल चुनें।",
+    "uploadSuccess": "परीक्षा पेपर सफलतापूर्वक अपलोड किया गया!",
+    "uploadFail": "परीक्षा पेपर अपलोड करने में विफल रहा।"
+  },
+  "errorBoundary": {
+    "title": "त्रुटि",
+    "message": "पेज लोड करते समय कुछ गलत हो गया।",
+    "retry": "पुनः प्रयास करें"
+  }
+}

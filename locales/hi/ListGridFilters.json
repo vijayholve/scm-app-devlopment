@@ -1,0 +1,16 @@
+{
+  "label": {
+    "school": "स्कूल",
+    "class": "कक्षा",
+    "division": "विभाग"
+  },
+  "option": {
+    "allSchools": "सभी स्कूल",
+    "allClasses": "सभी कक्षाएं",
+    "allDivisions": "सभी विभाग",
+    "none": "कोई नहीं"
+  },
+  "action": {
+    "clear": "साफ़ करें"
+  }
+}

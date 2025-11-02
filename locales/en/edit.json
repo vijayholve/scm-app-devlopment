@@ -1,0 +1,459 @@
+{
+   "student": {
+    "title": {
+      "add": "Add Student",
+      "edit": "Edit Student"
+    },
+    "tabs": {
+      "details": "Student Details",
+      "documents": "Documents"
+    },
+    "fields": {
+      "userName": "User Name",
+      "password": "Password",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "mobile": "Mobile Number",
+      "email": "Email",
+      "dateOfBirth": "Date of Birth",
+      "address": "Address",
+      "rollNo": "Roll No",
+      "school": "School",
+      "class": "Class",
+      "division": "Division",
+      "role": "Role"
+    },
+    "validation": {
+      "emailRequired": "Email is required",
+      "emailInvalid": "Must be a valid email",
+      "passwordRequired": "Password is required",
+      "userNameRequired": "User Name is required",
+      "firstNameRequired": "First Name is required",
+      "lastNameRequired": "Last Name is required",
+      "mobileRequired": "Mobile number is required",
+      "mobileDigitsOnly": "Mobile number must be digits only",
+      "mobileMin": "Mobile number must be at least 10 digits",
+      "mobileMax": "Mobile number cannot exceed 15 digits",
+      "rollNoRequired": "Roll No is required",
+      "dobRequired": "Date of Birth is required",
+      "dobFuture": "Date of Birth cannot be in the future",
+      "classRequired": "Class is required",
+      "divisionRequired": "Division is required",
+      "roleRequired": "Role is required"
+    },
+    "messages": {
+      "loading": "Loading student data...",
+      "fetchFailed": "Failed to load student data.",
+      "updateSuccess": "Student updated successfully",
+      "createSuccess": "Student added successfully",
+      "saveError": "Failed to save student data."
+    },
+    "bulkUpload": {
+      "title": "Bulk Student Upload",
+      "prompt": {
+        "selectSCD": "Select School, Class and Division first. After selection, upload the filled Excel file.",
+        "clickFile": "Click to select an .xlsx file",
+        "maxSize": "Maximum file size: 5MB",
+        "selectFileError": "Please select a file to upload.",
+        "selectSCDError": "Please select School, Class and Division before uploading."
+      },
+      "action": {
+        "downloadSample": "Download Sample Excel File",
+        "downloading": "Downloading...",
+        "upload": "Upload",
+        "uploading": "Uploading...",
+        "close": "Close"
+      },
+      "result": {
+        "summaryHeading": "Upload Summary",
+        "createdUsers": "Created Users",
+        "successCount": "Created:",
+        "failCount": "Failed:",
+        "totalProcessed": "Total processed:",
+        "failureDetails": "Failure Details",
+        "recordCreated": "Created",
+        "failed": "Failed",
+        "invalidFile": "Please select a valid Excel file (.xlsx).",
+        "uploadFailed": "Bulk upload failed."
+      },
+      "label": {
+        "school": "School",
+        "class": "Class",
+        "division": "Division"
+      }
+    }
+  },
+ "teacher": {
+    "title": {
+      "add": "Add Teacher/Staff",
+      "edit": "Edit Teacher/Staff"
+    },
+    "tabs": {
+      "basic": "Basic Details",
+      "education": "Education",
+      "allocation": "Class Allocation",
+      "documents": "Documents"
+    },
+    "fields": {
+      "userName": "User Name",
+      "password": "Password",
+      "firstName": "First Name",
+      "middleName": "Middle Name",
+      "lastName": "Last Name",
+      "mobile": "Mobile No",
+      "email": "Email",
+      "address": "Address",
+      "dob": "Date of Birth",
+      "role": "Role",
+      "gender": "Gender",
+      "school": "School",
+      "type": "Type",
+      "class": "Class",
+      "division": "Division"
+    },
+    "education": {
+      "heading": "Education {0}",
+      "qualification": "Higher Qualification",
+      "institution": "School/College Name",
+      "board": "Board/University Name",
+      "year": "Pass Out Year",
+      "percentage": "Percentage",
+      "noRecords": "No education records. Add one below."
+    },
+    "action": {
+      "addEducation": "Add Education",
+      "removeAllocation": "Remove",
+      "addAllocation": "Add Allocation"
+    },
+    "allocation": {
+      "noAllocations": "No allocations added.",
+      "addAllocation": "Add Allocation"
+    },
+    "validation": {
+      "emailRequired": "Email is required",
+      "passwordRequired": "Password is required",
+      "hqRequired": "Higher Qualification is required",
+      "institutionRequired": "School/College Name is required",
+      "boardRequired": "Board/University Name is required",
+      "yearRequired": "Pass Out Year is required",
+      "yearTypeError": "Pass Out Year must be a number",
+      "percentageRequired": "Percentage is required",
+      "percentageTypeError": "Percentage must be a number",
+      "percentageRange": "Percentage must be between 0 and 100",
+      "yearInvalid": "Year must be current or past"
+    },
+    "messages": {
+      "loading": "Loading Teacher/Staff data...",
+      "updateSuccess": "Teacher updated successfully",
+      "createSuccess": "Teacher created successfully",
+      "saveError": "Failed to submit teacher data."
+    }
+  },
+  "role": {
+    "title": { "add": "Add Role", "edit": "Edit Role" },
+    "fields": { "name": "Role Name", "permissions": "Permissions", "school": "School" },
+    "messages": {
+      "fetchFailed": "Failed to fetch initial data.",
+      "createSuccess": "Role created successfully!",
+      "updateSuccess": "Role updated successfully!",
+      "saveFailed": "Failed to save role.",
+      "createLabel": "Create",
+      "updateLabel": "Update"
+    },
+    "table": { "entity": "Entity" },
+    "actions": { "add": "Add", "edit": "Edit", "view": "View", "delete": "Delete" },
+    "headings": { "configurePermissions": "Configure Permissions" }
+  },
+"documentManager": {
+    "title": "User Documents",
+    "addModalTitle": "Add New Document",
+    "table": {
+      "name": "Document Name",
+      "uploadedOn": "Uploaded On",
+      "actions": "Actions",
+      "noDocuments": "No documents found for this user."
+    },
+    "action": {
+      "add": "Add Document",
+      "download": "Download",
+      "delete": "Delete",
+      "save": "Save",
+      "cancel": "Cancel",
+      "selectFile": "Select File"
+    },
+    "form": {
+      "documentNameLabel": "Document Name"
+    },
+    "messages": {
+      "uploading": "Uploading...",
+      "downloadingLoader": "Loading For Downloading Document",
+      "maxFileSizeError": "File is too large (max 5MB).",
+      "requiredError": "Please provide a document name and select a file.",
+      "uploadSuccess": "Document uploaded successfully!",
+      "uploadFailed": "Failed to upload document. Please try again.",
+      "downloadFailed": "Error downloading the file.",
+      "deleteConfirm": "Are you sure you want to delete this document?",
+      "deleteSuccess": "Document deleted successfully!"
+    }
+  } ,
+  "course": {
+    "title": { "add": "Add Course", "edit": "Edit Course" },
+    "fields": { "name": "Course Name", "description": "Description", "school": "School" }
+  },
+  "school": {
+    "title": {
+      "add": "Ajouter une École",
+      "edit": "Modifier l'École"
+    },
+    "label": {
+      "name": "Nom de l'École",
+      "institute": "Institut",
+      "address1": "Ligne d'Adresse 1",
+      "address2": "Ligne d'Adresse 2",
+      "city": "Ville",
+      "state": "État",
+      "zipCode": "Code Postal",
+      "mobile": "Numéro de Mobile",
+      "telephone": "Numéro de Téléphone",
+      "email": "Adresse E-mail",
+      "code": "Code de l'École",
+      "selectInstitute": "Sélectionner un Institut"
+    },
+    "validation": {
+      "nameRequired": "Le Nom de l'École est obligatoire",
+      "instituteRequired": "L'Institut est obligatoire",
+      "address1Required": "La Ligne d'Adresse 1 est obligatoire",
+      "cityRequired": "La Ville est obligatoire",
+      "stateRequired": "L'État est obligatoire",
+      "zipCodeRequired": "Le Code Postal est obligatoire",
+      "zipCodeInvalid": "Doit être un code postal valide",
+      "mobileRequired": "Le Numéro de Mobile est obligatoire",
+      "mobileInvalid": "Entrez un numéro de mobile valide à 10 chiffres",
+      "telephoneRequired": "Le Numéro de Téléphone est obligatoire",
+      "telephoneInvalid": "Entrez un numéro de téléphone valide (ex: 020-12345678)",
+      "emailRequired": "L'E-mail est obligatoire",
+      "emailInvalid": "Doit être une adresse e-mail valide",
+      "codeRequired": "Le Code de l'École est obligatoire"
+    },
+    "action": {
+      "save": "Enregistrer",
+      "update": "Mettre à jour"
+    },
+    "messages": {
+      "fetchInstitutesFailed": "Échec de la récupération des instituts.",
+      "fetchFailed": "Échec de la récupération des données de l'école.",
+      "updateSuccess": "École mise à jour avec succès !",
+      "createSuccess": "École créée avec succès !",
+      "saveError": "Une erreur est survenue lors de l'enregistrement de l'école. Veuillez réessayer."
+    }
+  },
+"subject": {
+    "title": {
+      "add": "Add Subject",
+      "edit": "Edit Subject"
+    },
+    "label": {
+      "name": "Subject Name",
+      "code": "Subject Code",
+      "school": "Select School"
+    },
+    "validation": {
+      "nameRequired": "Name is required",
+      "schoolRequired": "School is required"
+    },
+    "messages": {
+      "loading": "Loading subject data...",
+      "updateSuccess": "Subject saved successfully!",
+      "saveError": "Failed to save subject data. Please try again."
+    }
+  },
+  "assignment": {
+    "title": { "add": "Add Assignment", "edit": "Edit Assignment" },
+    "fields": { "name": "Name", "deadline": "Deadline", "subject": "Subject", "message": "Message" },
+    "messages": {
+      "loading": "Loading Assignment...",
+      "saved": "Assignment saved successfully",
+      "uploadTitle": "📁 Upload Assignment File",
+      "uploadSubtitle": "Click to select file or drag & drop",
+      "submissionsTitle": { "student": "📋 My Submissions & Teacher Feedback", "teacher": "📋 All Student Submissions" },
+      "submissionsSubtitle": {
+        "student": "View your submitted work and teacher's comments",
+        "teacher": "Review and grade student submissions"
+      },
+      "table": {
+        "studentId": "👤 Student ID",
+        "submittedFile": "📄 Submitted File",
+        "submissionDate": "📅 Submission Date",
+        "download": "👁️ Download",
+        "status": "⭐ Status",
+        "feedback": "💬 Feedback",
+        "actions": "🔧 Actions"
+      },
+      "download": "Download",
+      "downloadAssignment": "Download Assignment",
+      "pending": "Pending",
+      "na": "N/A",
+      "noFeedbackYet": "No feedback yet",
+      "enterFeedback": "Enter feedback",
+      "accept": "Accept",
+      "reject": "Reject",
+      "deleteConfirmation": "Are you sure you want to delete this submission?",
+      "toast": {
+        "submissionUpdated": "Submission updated",
+        "submissionUpdateFailed": "Failed to update submission",
+        "submissionDeleted": "Submission deleted",
+        "submissionDeleteFailed": "Failed to delete submission"
+      },
+      "empty": {
+        "student": "You haven't submitted any work for this assignment yet.",
+        "teacher": "No student submissions found for this assignment."
+      }
+    }
+  },
+  "division": {
+    "title": { "add": "Add Division", "edit": "Edit Division" },
+    "fields": { "name": "Division Name", "code": "Division Code" },
+    "messages": {
+      "loading": "Loading Division...",
+      "saved": "Division saved successfully",
+      "saveLabel": "Save",
+      "updateLabel": "Update"
+    }
+  },
+  "class": {
+    "title": { "add": "Add Class", "edit": "Edit Class" },
+    "fields": { "name": "Class Name", "school": "School", "institute": "Institute" },
+    "messages": {
+      "loading": "Loading Class...",
+      "savedAdd": "Class added successfully!",
+      "savedUpdate": "Class updated successfully!",
+      "duplicate": "This class name already exists for the selected school.",
+      "instituteRequired": "Institute is required",
+      "schoolRequired": "School is required",
+      "saveLabel": "Save",
+      "updateLabel": "Update",
+      "unexpectedError": "An unexpected error occurred. Please try again.",
+      "saveFailed": "Failed to save class. Please try again."
+    }
+  },
+  "attendance": {
+    "title": { "add": "Add Attendance", "edit": "Edit Attendance" },
+    "fields": { "date": "Date", "class": "Class", "division": "Division", "subject": "Subject" },
+    "messages": {
+      "selectPlaceholder": "Select Class, Division and Subject",
+      "updated": "Attendance updated successfully"
+    }
+  },
+  "exam": {
+    "title": { "add": "Add Exam", "edit": "Edit Exam" },
+    "fields": {
+      "school": "School",
+      "class": "Class",
+      "division": "Division",
+      "examName": "Exam Name",
+      "academicYear": "Academic Year",
+      "examType": "Exam Type",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "subject": "Subject",
+      "quiz": "Quiz",
+      "maxMarks": "Max Marks",
+      "passingMarks": "Passing Marks",
+      "duration": "Duration (Mins)",
+      "examDateTime": "Exam Date & Time",
+      "totalMarks": "Total Marks"
+    },
+    "headings": {
+      "examSubjects": "Exam Subjects"
+    },
+    "validation": {
+      "schoolRequired": "School is required",
+      "classRequired": "Class is required",
+      "divisionRequired": "Division is required",
+      "examNameRequired": "Exam Name is required",
+      "academicYearRequired": "Academic Year is required",
+      "examTypeRequired": "Exam Type is required",
+      "startDateRequired": "Start Date is required",
+      "endDateRequired": "End Date is required",
+      "subjectRequired": "Subject is required",
+      "quizRequired": "Quiz is required",
+      "maxMarksNumber": "Max Marks must be a number",
+      "maxMarksRequired": "Max Marks is required",
+      "minOne": "Must be at least 1",
+      "passingMarksNumber": "Passing Marks must be a number",
+      "passingMarksRequired": "Passing Marks is required",
+      "minZero": "Must be at least 0",
+      "durationNumber": "Duration must be a number",
+      "durationRequired": "Duration is required",
+      "examDateTimeRequired": "Exam Date & Time is required",
+      "atLeastOne": "At least one subject is required"
+    },
+    "messages": {
+      "loading": "Loading Exam...",
+      "fetchError": "Failed to fetch exam details.",
+      "created": "Exam created successfully!",
+      "createFailed": "Failed to create exam.",
+      "updated": "Exam updated successfully!",
+      "updateFailed": "Failed to update exam.",
+      "createLabel": "Create Exam",
+      "updateLabel": "Update Exam"
+    }
+  },
+  "timetable": {
+    "title": { "add": "Add Timetable", "edit": "Edit Timetable" },
+    "fields": { "school": "School", "class": "Class", "division": "Division", "dayTimeTable": "Day Time Table" }
+  },
+  "institute": {
+    "title": { "add": "Add Institute", "edit": "Edit Institute" },
+    "fields": {
+      "id": "ID",
+      "name": "Institute Name",
+      "address": "Address",
+      "addressLine2": "Address Line 2",
+      "city": "City",
+      "state": "State",
+      "zipCode": "Zip Code",
+      "mobileNumber": "Mobile Number",
+      "email": "Email",
+      "faxNumber": "Fax Number",
+      "code": "Code"
+    },
+    "messages": {
+      "loading": "Loading Institute...",
+      "fetchFailed": "Failed to fetch institute data.",
+      "nameExists": "This institute name already exists.",
+      "createSuccess": "Institute created successfully!",
+      "updateSuccess": "Institute updated successfully!",
+      "saveFailed": "Failed to save institute. Please try again.",
+      "updateLabel": "Update"
+    },
+    "validation": {
+      "addressRequired": "Address Line 1 is required",
+      "cityRequired": "City is required",
+      "stateRequired": "State is required",
+      "zipCodeInvalid": "Must be a valid zip code",
+      "zipCodeRequired": "Zip Code is required",
+      "mobileInvalid": "Mobile number must be 10 digits",
+      "mobileRequired": "Mobile Number is required",
+      "faxRequired": "Fax Number is required",
+      "codeRequired": "Code is required"
+    }
+  },
+  "studentParent": {
+    "title": { "add": "Add Student/Parent", "edit": "Edit Student/Parent" },
+    "fields": { "name": "Name", "mobile": "Mobile No", "email": "Email" }
+  },
+  "notifications": {
+    "title": { "create": "Create Notification", "edit": "Edit Notification" },
+    "fields": { "title": "Title", "message": "Message", "sendTo": "Send To" }
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "loading": "Loading...",
+    "required": "This field is required",
+    "invalidEmail": "Must be a valid email",
+    "dateInFuture": "Date cannot be in the future"
+  }
+}

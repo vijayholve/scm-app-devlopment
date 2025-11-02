@@ -1,0 +1,47 @@
+{
+  "title": {
+    "availableExams": "Exámenes Disponibles",
+    "examResult": "Resultado del Examen",
+    "examinationCertificate": "Certificado de Examen",
+    "subjectWiseDetails": "Detalles por Materia"
+  },
+  "columns": {
+    "examName": "Nombre del Examen",
+    "class": "Clase",
+    "division": "División",
+    "actions": "Acciones"
+  },
+  "Actions": {
+    "ViewResult": "Ver Resultado"
+  },
+    "messages": {
+        "noExams": "No hay exámenes disponibles en este momento.",
+        "noResults": "No se encontraron resultados de exámenes."
+    },
+  "labels": {
+    "school": "Escuela",
+    "student": "Estudiante",
+    "exam": "Examen",
+    "classDivision": "Clase / División",
+    "totalMarks": "Puntuación Total",
+    "percentage": "Porcentaje",
+    "marks": "Puntuación",
+    "grade": "Grado",
+    "remarks": "Observaciones"
+  },
+  "subject": {
+    "mathematics2": "Matemáticas 2"
+  },
+  "data": {
+    "schoolName": "Escuela Pública Springfield",
+    "studentName": "Neha Das",
+    "externalExam": "examen externo",
+    "classDivisionValue": "Clase 10-B / División A",
+    "totalMarksValue": "25 / 100",
+    "percentageValue": "25.00%",
+    "subjectName": "Matemáticas 2",
+    "subjectMarksValue": "25 / 100",
+    "gradeValue": "-",
+    "remarksValue": "-"
+  }
+}

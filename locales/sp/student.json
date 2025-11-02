@@ -1,0 +1,86 @@
+{
+  "student": {
+    "title": {
+      "add": "Añadir Estudiante",
+      "edit": "Editar Estudiante"
+    },
+    "tabs": {
+      "details": "Detalles del Estudiante",
+      "documents": "Documentos"
+    },
+    "fields": {
+      "userName": "Nombre de Usuario",
+      "password": "Contraseña",
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "mobile": "Número de Móvil",
+      "email": "Correo Electrónico",
+      "dateOfBirth": "Fecha de Nacimiento",
+      "address": "Dirección",
+      "rollNo": "Número de Matrícula",
+      "school": "Escuela",
+      "class": "Clase",
+      "division": "División",
+      "role": "Rol"
+    },
+    "validation": {
+      "emailRequired": "El Correo Electrónico es obligatorio",
+      "emailInvalid": "Debe ser un correo electrónico válido",
+      "passwordRequired": "La Contraseña es obligatoria",
+      "userNameRequired": "El Nombre de Usuario es obligatorio",
+      "firstNameRequired": "El Nombre es obligatorio",
+      "lastNameRequired": "El Apellido es obligatorio",
+      "mobileRequired": "El Número de Móvil es obligatorio",
+      "mobileDigitsOnly": "El número de móvil debe contener solo dígitos",
+      "mobileMin": "El número de móvil debe tener al menos 10 dígitos",
+      "mobileMax": "El número de móvil no puede exceder 15 dígitos",
+      "rollNoRequired": "El Número de Matrícula es obligatorio",
+      "dobRequired": "La Fecha de Nacimiento es obligatoria",
+      "dobFuture": "La Fecha de Nacimiento no puede ser futura",
+      "classRequired": "La Clase es obligatoria",
+      "divisionRequired": "La División es obligatoria",
+      "roleRequired": "El Rol es obligatorio"
+    },
+    "messages": {
+      "loading": "Cargando datos del estudiante...",
+      "fetchFailed": "Fallo al cargar los datos del estudiante.",
+      "updateSuccess": "Estudiante actualizado con éxito",
+      "createSuccess": "Estudiante añadido con éxito",
+      "saveError": "Fallo al guardar los datos del estudiante."
+    },
+    "bulkUpload": {
+      "title": "Carga Masiva de Estudiantes",
+      "prompt": {
+        "selectSCD": "Primero seleccione Escuela, Clase y División. Luego, suba el archivo Excel rellenado.",
+        "clickFile": "Haga clic para seleccionar un archivo .xlsx",
+        "maxSize": "Tamaño máximo de archivo: 5MB",
+        "selectFileError": "Por favor, seleccione un archivo para subir.",
+        "selectSCDError": "Por favor, seleccione Escuela, Clase y División antes de subir."
+      },
+      "action": {
+        "downloadSample": "Descargar Archivo Excel de Ejemplo",
+        "downloading": "Descargando...",
+        "upload": "Subir",
+        "uploading": "Subiendo...",
+        "close": "Cerrar"
+      },
+      "result": {
+        "summaryHeading": "Resumen de Carga",
+        "createdUsers": "Usuarios Creados",
+        "successCount": "Creados:",
+        "failCount": "Fallidos:",
+        "totalProcessed": "Total procesado:",
+        "failureDetails": "Detalles de Fallo",
+        "recordCreated": "Creado",
+        "failed": "Fallido",
+        "invalidFile": "Por favor, seleccione un archivo Excel válido (.xlsx).",
+        "uploadFailed": "La carga masiva falló."
+      },
+      "label": {
+        "school": "Escuela",
+        "class": "Clase",
+        "division": "División"
+      }
+    }
+  }
+}

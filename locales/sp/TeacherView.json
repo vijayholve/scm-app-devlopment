@@ -1,0 +1,50 @@
+{
+  "title": "Calificar Exámenes",
+  "gradeExamTitle": "Calificar Examen",
+  "filters": {
+    "selectSchool": "Seleccionar Escuela",
+    "selectClass": "Seleccionar Clase",
+    "selectDivision": "Seleccionar División",
+    "selectExam": "Seleccionar Examen"
+  },
+  "dataGrid": {
+    "studentName": "Nombre del Estudiante",
+    "actions": "Acciones",
+    "saveAll": "Guardar Todo",
+    "placeholderMarks": "Calificación"
+  },
+  "gradingView": {
+    "titlePrefix": "Calificando",
+    "tabEnterMarks": "Ingresar Calificación",
+    "tabViewPaperAnswers": "Ver Examen y Respuestas",
+    "tabViewQuizResult": "Ver Resultado del Cuestionario",
+    "tabUploadPaper": "Subir Examen",
+    "marksHeading": "Ingresar Calificación (Máx. {{maxMarks}})",
+    "saveMarks": "Guardar Calificación",
+    "back": "Volver",
+    "questionAnswerTitle": "Cuestionario y Respuestas del Estudiante",
+    "placeholderViewText": "Esta es una vista de marcador de posición para el examen de {{subjectName}}.",
+    "studentAnswer": "Respuesta de {{studentName}}: {{answer}}",
+    "questionPrefix": "Pregunta:",
+    "uploadPaperTitle": "Subir Examen",
+    "selectFileLabel": "Seleccione un archivo para subir",
+    "uploadButton": "Subir Examen",
+    "uploadingButton": "Subiendo...",
+    "noQuestionFound": "No se encontró la pregunta para esta asignatura.",
+    "noAnswerSubmitted": "No se envió respuesta."
+  },
+  "toasts": {
+    "loadExamsFail": "Error al cargar los exámenes",
+    "marksExceeded": "La calificación no puede exceder {{maxMarks}}.",
+    "saveMarksSuccess": "¡Calificación guardada con éxito para {{studentName}}!",
+    "saveMarksFail": "Error al guardar la calificación. Por favor, inténtelo de nuevo.",
+    "selectFileToUpload": "Por favor, seleccione un archivo para subir.",
+    "uploadSuccess": "¡Examen subido con éxito!",
+    "uploadFail": "Error al subir el examen."
+  },
+  "errorBoundary": {
+    "title": "Error",
+    "message": "Algo salió mal al cargar la página.",
+    "retry": "Reintentar"
+  }
+}

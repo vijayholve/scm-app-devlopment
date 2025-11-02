@@ -1,0 +1,46 @@
+{
+  "title": {
+    "availableExams": "Available Exams",
+    "examResult": "Exam Result",
+    "examinationCertificate": "Examination Certificate",
+    "subjectWiseDetails": "Subject-wise Details"
+  },
+  "columns": {
+    "examName": "Exam Name",
+    "class": "Class",
+    "division": "Division",
+    "actions": "Actions"
+  },"messages": {
+    "noExams": "No exams available at the moment.",
+    "noResults": "No exam results found."
+  },
+  "Actions": {
+    "ViewResult": "View Result"
+  },
+  "labels": {
+    "school": "School",
+    "student": "Student",
+    "exam": "Exam",
+    "classDivision": "Class / Division",
+    "totalMarks": "Total Marks",
+    "percentage": "Percentage",
+    "marks": "Marks",
+    "grade": "Grade",
+    "remarks": "Remarks"
+  },
+  "subject": {
+    "mathematics2": "Mathematics 2"
+  },
+  "data": {
+    "schoolName": "Springfield Public School",
+    "studentName": "Neha Das",
+    "externalExam": "external exam",
+    "classDivisionValue": "Class 10-B / Division A",
+    "totalMarksValue": "25 / 100",
+    "percentageValue": "25.00%",
+    "subjectName": "Mathematics 2",
+    "subjectMarksValue": "25 / 100",
+    "gradeValue": "-",
+    "remarksValue": "-"
+  }
+}

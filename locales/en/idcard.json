@@ -1,0 +1,92 @@
+{
+  "title": {
+    "idCardManagement": "ID Card Management"
+  },
+  "button": {
+    "generateIdCards": "Generate ID Cards"
+  },
+  "tab": {
+    "students": "Students",
+    "teachers": "Teachers"
+  },
+  "column": {
+    "select": "Select",
+    "id": "ID",
+    "rollNo": "Roll No",
+    "studentName": "Student Name",
+    "teacherName": "Teacher Name",
+    "class": "Class",
+    "division": "Division",
+    "email": "Email",
+    "mobile": "Mobile",
+    "gender": "Gender",
+    "actions": "Actions",
+    "role": "Role",
+    "status": "Status"
+  },
+  "action": {
+    "viewDetails": "View Details",
+    "generateIdCard": "Generate ID Card",
+    "selectAll": "Select All",
+    "selected": "selected"
+  },
+  "modal": {
+    "title": "Generate ID Cards - {{entity}}",
+    "selectTemplate": "Select ID Card Template",
+    "preview": "Preview ({{count}} record{{plural}}) selected",
+    "noteBulk": "Note: {{count}} ID cards will be generated. The preview shows the first selected record.",
+    "noData": "No data available for preview",
+    "cancel": "Cancel",
+    "print": "Print ID Cards",
+    "download": "Download PDF"
+  },
+  "messages": {
+    "fetchFailed": "Failed to fetch selected records",
+    "printSuccess": "ID cards sent to printer successfully!",
+    "printFailed": "Failed to print ID cards",
+    "downloadSuccess": "ID cards downloaded successfully!",
+    "downloadFailed": "Failed to download ID cards"
+  },
+  "processing": "Processing...",
+  "generating": "Generating...",
+  "previewNoteTitle": "Note:",
+  "template": {
+    "modern": {
+      "name": "Modern Design",
+      "desc": "Clean and contemporary design with vibrant colors"
+    },
+    "classic": {
+      "name": "Classic Border",
+      "desc": "Traditional design with elegant borders"
+    },
+    "minimal": {
+      "name": "Minimal Flat",
+      "desc": "Simple and minimalist flat design"
+    },
+    "common": {
+      "student": "STUDENT",
+      "faculty": "FACULTY",
+      "label": {
+        "rollNo": "Roll No",
+        "email": "Email",
+        "class": "Class",
+        "role": "Role",
+        "dob": "DOB",
+        "mobile": "Mobile"
+      }
+    },
+    "info": {
+      "schoolName": "SUNSHINE HIGH SCHOOL",
+      "schoolSlogan": "Excellence in Education",
+      "classicSlogan": "Est. 1985 • Excellence in Education",
+      "minimalSlogan": "Modern Education Hub"
+    }
+  },
+  "secondary": {
+    "description": "Manage student and teacher ID cards with professional templates"
+  },
+  "searchPlaceholder": {
+    "students": "Search by Name/Roll No/Email",
+    "teachers": "Search by Name/Email"
+  }
+}

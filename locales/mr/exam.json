@@ -1,0 +1,48 @@
+{
+  "title": {
+    "availableExams": "उपलब्ध परीक्षा",
+    "examResult": "परीक्षेचा निकाल",
+    "examinationCertificate": "परीक्षा प्रमाणपत्र",
+    "subjectWiseDetails": "विषयवार तपशील"
+  },
+
+  "columns": {
+    "examName": "परीक्षेचे नाव",
+    "class": "वर्ग",
+    "division": "विभाग",
+    "actions": "कृती"
+  },
+    "messages": {
+        "noExams": "सध्या कोणतीही परीक्षा उपलब्ध नाही.",
+        "noResults": "कोणताही परीक्षा निकाल सापडला नाही."
+    },
+  "Actions": {
+    "ViewResult": "निकाल पहा"
+  },
+  "labels": {
+    "school": "शाळा",
+    "student": "विद्यार्थी",
+    "exam": "परीक्षा",
+    "classDivision": "वर्ग / विभाग",
+    "totalMarks": "एकूण गुण",
+    "percentage": "टक्केवारी",
+    "marks": "गुण",
+    "grade": "ग्रेड",
+    "remarks": "शेरा"
+  },
+  "subject": {
+    "mathematics2": "गणित 2"
+  },
+  "data": {
+    "schoolName": "स्प्रिंगफील्ड पब्लिक स्कूल",
+    "studentName": "नेहा दास",
+    "externalExam": "बाह्य परीक्षा",
+    "classDivisionValue": "वर्ग 10-बी / विभाग ए",
+    "totalMarksValue": "25 / 100",
+    "percentageValue": "25.00%",
+    "subjectName": "गणित 2",
+    "subjectMarksValue": "25 / 100",
+    "gradeValue": "-",
+    "remarksValue": "-"
+  }
+}

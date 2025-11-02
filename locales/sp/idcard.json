@@ -1,0 +1,87 @@
+{
+  "title": {
+    "idCardManagement": "Gestión de Tarjetas de Identificación"
+  },
+  "button": {
+    "generateIdCards": "Generar Tarjetas ID"
+  },
+  "tab": {
+    "students": "Estudiantes",
+    "teachers": "Profesores"
+  },
+  "column": {
+    "rollNo": "Nº de Matrícula",
+    "studentName": "Nombre del Estudiante",
+    "teacherName": "Nombre del Profesor",
+    "class": "Clase",
+    "division": "División",
+    "email": "Correo Electrónico",
+    "mobile": "Móvil",
+    "gender": "Género"
+  },
+  "action": {
+    "viewDetails": "Ver Detalles",
+    "generateIdCard": "Generar Tarjeta ID",
+    "selectAll": "Seleccionar Todo",
+    "selected": "seleccionado"
+  },
+  "modal": {
+    "title": "Generar Tarjetas de Identificación - {{entity}}",
+    "selectTemplate": "Seleccionar Plantilla de Tarjeta ID",
+    "preview": "Vista previa ({{count}} registro{{plural}}) seleccionado",
+    "noteBulk": "Nota: Se generarán {{count}} tarjetas de identificación. La vista previa muestra el primer registro seleccionado.",
+    "noData": "No hay datos disponibles para la vista previa",
+    "cancel": "Cancelar",
+    "print": "Imprimir Tarjetas ID",
+    "download": "Descargar PDF"
+  },
+  "messages": {
+    "fetchFailed": "No se pudieron obtener los registros seleccionados",
+    "printSuccess": "¡Tarjetas enviadas a la impresora correctamente!",
+    "printFailed": "Error al imprimir las tarjetas de identificación",
+    "downloadSuccess": "¡Tarjetas descargadas correctamente!",
+    "downloadFailed": "Error al descargar las tarjetas de identificación"
+  },
+  "processing": "Procesando...",
+  "generating": "Generando...",
+  "previewNoteTitle": "Nota:",
+  "template": {
+    "modern": {
+      "name": "Diseño Moderno",
+      "desc": "Diseño limpio y contemporáneo con colores vibrantes"
+    },
+    "classic": {
+      "name": "Borde Clásico",
+      "desc": "Diseño tradicional con bordes elegantes"
+    },
+    "minimal": {
+      "name": "Mínimo Plano",
+      "desc": "Diseño simple y minimalista"
+    },
+    "common": {
+      "student": "ESTUDIANTE",
+      "faculty": "PROFESORADO",
+      "label": {
+        "rollNo": "Nº de Matrícula",
+        "class": "Clase",
+        "role": "Rol",
+        "dob": "Fecha de Nac.",
+        "mobile": "Móvil",
+        "email": "Correo Electrónico"
+      }
+    },
+    "info": {
+      "schoolName": "SUNSHINE HIGH SCHOOL",
+      "schoolSlogan": "Excelencia en Educación",
+      "classicSlogan": "Est. 1985 • Excelencia en Educación",
+      "minimalSlogan": "Centro de Educación Moderno"
+    }
+  },
+  "secondary": {
+    "description": "Administre tarjetas de identificación de estudiantes y docentes con plantillas profesionales"
+  },
+  "searchPlaceholder": {
+    "students": "Buscar por Nombre/Nº/Correo",
+    "teachers": "Buscar por Nombre/Correo"
+  }
+}
