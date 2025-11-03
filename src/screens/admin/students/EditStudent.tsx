@@ -1,385 +1,430 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { View, StyleSheet, ScrollView, Platform } from "react-native";
-import {
-  Button,
-  Text,
-  TextInput,
-  HelperText,
-  ActivityIndicator,
-  Divider,
-  Menu,
-  List,
-} from "react-native-paper";
-// Native community datetime picker (common in RN projects). If not present, the code gracefully falls back to a text input.
-import DateTimePicker from "@react-native-community/datetimepicker";
-import { apiService } from "../../../api/apiService";
-import { storage } from "../../../utils/storage";
+import React, { useState, useEffect, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
+// Using react-router-dom for navigation based on your original file's structure.
+import { useParams, useNavigate } from 'react-router-dom'; 
+// Import React Native core components
+import { View, Text, StyleSheet, TouchableOpacity, ActivityIndicator } from 'react-native'; 
+import * as Yup from 'yup';
+// Assuming 'react-hot-toast' is handled or polyfilled in your RN environment
+import { toast, Toaster } from 'react-hot-toast'; 
+import PropTypes from 'prop-types';
+import { FormikProps, FormikHelpers } from 'formik';
 
-type RoleOption = { id: string; name: string };
-type Option = { id: string; name: string };
+// --- RN-COMPATIBLE IMPORTS (These need to be correct exports) ---
+// Note: SCDSelector is assumed to be an RN component defined elsewhere in your project.
+import MainCard from '../../../ui-component/cards/MainCard';
+import ReusableLoader from '../../../components/common/ReusableLoader';
+import UserDocumentManager from '../../../views/UserDocumentManager';
+import SCDSelectorNative from '../../../components/common/SCDSelector.native';
+import ReusableForm, { IFormField } from '../../../components/common/ReusableForm';
 
-type Props = {
-  id?: string | null;
-  onClose: () => void;
-  onSaved: () => void;
+// Assuming common utilities and store structure exists
+import api,{userDetails} from '../../../api';
+import { useSelector } from 'react-redux'; 
+
+// ====================================================================================
+// 1. Types and Initial State
+// ====================================================================================
+
+interface Role {
+    id: number | string;
+    name: string;
+}
+
+interface IStudentFormValues {
+    userName: string;
+    password?: string;
+    firstName: string;
+    lastName: string;
+    mobile: string;
+    email: string;
+    address: string;
+    rollNo: string;
+    dob: string; 
+    schoolId: string;
+    schoolName: string;
+    classId: string;
+    className: string;
+    divisionId: string;
+    divisionName: string;
+    role: Role | null;
+    status: 'active' | 'inactive';
+}
+
+const initialStudentState: IStudentFormValues = {
+  userName: '',
+  password: '',
+  firstName: '',
+  lastName: '',
+  mobile: '',
+  email: '',
+  address: '',
+  rollNo: '',
+  dob: '',
+  schoolId: '',
+  schoolName: '',
+  classId: '',
+  className: '',
+  divisionId: '',
+  divisionName: '',
+  role: null,
+  status: 'active'
 };
 
-export const EditStudent: React.FC<Props> = ({ id, onClose, onSaved }) => {
-  const [loading, setLoading] = useState(true);
-  const [saving, setSaving] = useState(false);
-  const [accountId, setAccountId] = useState<string | null>(null);
-  const [showDatePicker, setShowDatePicker] = useState(false);
-  const [roleMenuVisible, setRoleMenuVisible] = useState(false);
+// ====================================================================================
+// 2. Tab Helper (RN Style - Simple Emulation)
+// ====================================================================================
 
-  const [roles, setRoles] = useState<RoleOption[]>([]);
-  const [schools, setSchools] = useState<Option[]>([]);
-  const [classes, setClasses] = useState<Option[]>([]);
-  const [divisions, setDivisions] = useState<Option[]>([]);
+const colors = {
+    primary: '#6200EE',
+    secondary: '#03DAC6',
+    text: '#000000',
+    divider: '#E0E0E0',
+    card: '#FFFFFF',
+    background: '#F5F5F5',
+};
 
-  const [form, setForm] = useState<any>({
-    userName: "",
-    password: "",
-    firstName: "",
-    lastName: "",
-    mobile: "",
-    email: "",
-    address: "",
-    rollNo: "",
-    dob: "",
-    schoolId: "",
-    classId: "",
-    divisionId: "",
-    role: null,
-    status: "active",
-  });
-
-  useEffect(() => {
-    const init = async () => {
-      try {
-        const raw = await storage.getItem("SCM-AUTH");
-        const accId = raw ? JSON.parse(raw)?.data?.accountId : null;
-        setAccountId(accId);
-        if (accId) {
-          const [rolesRes, schoolsRes, classesRes, divisionsRes] =
-            await Promise.all([
-              apiService.getRoles(accId),
-              apiService.getSchools(accId),
-              apiService.getClassesList(accId),
-              apiService.getDivisions(accId),
-            ]);
-          setRoles(rolesRes);
-          setSchools(schoolsRes);
-          setClasses(classesRes);
-          setDivisions(divisionsRes);
-        }
-        if (id) {
-          const data = await apiService.getStudentById(id);
-          setForm({
-            userName: data.userName || "",
-            password: "",
-            firstName: data.firstName || "",
-            lastName: data.lastName || "",
-            mobile: data.mobile || "",
-            email: data.email || "",
-            address: data.address || "",
-            rollNo: String(data.rollNo || ""),
-            dob: data.dob || "",
-            schoolId: data.schoolId ? String(data.schoolId) : "",
-            classId: data.classId ? String(data.classId) : "",
-            divisionId: data.divisionId ? String(data.divisionId) : "",
-            role: data.role
-              ? { id: String(data.role.id), name: data.role.name }
-              : null,
-            status: data.status || "active",
-          });
-        }
-      } catch (e) {
-      } finally {
-        setLoading(false);
-      }
-    };
-    init();
-  }, [id]);
-
-  const hasError = (key: string) => {
-    if (key === "email") return form.email && !/.+@.+\..+/.test(form.email);
-    if (key === "mobile")
-      return form.mobile && !/^\d{10,15}$/.test(form.mobile);
-    if (key === "rollNo") return !form.rollNo;
-    return false;
-  };
-
-  const formatDate = (d: Date | string | undefined | null) => {
-    if (!d) return "";
-    const date = d instanceof Date ? d : new Date(d);
-    if (Number.isNaN(date.getTime())) return "";
-    const yyyy = date.getFullYear();
-    const mm = String(date.getMonth() + 1).padStart(2, "0");
-    const dd = String(date.getDate()).padStart(2, "0");
-    return `${yyyy}-${mm}-${dd}`;
-  };
-
-  const onChangeDate = (_event: any, selected?: Date) => {
-    // On Android the picker closes automatically; on iOS we keep it open for further changes
-    if (selected) {
-      setForm((f: any) => ({ ...f, dob: formatDate(selected) }));
+const RNTabPanel = ({ children, value, index }) => {
+    if (value !== index) {
+        return null;
     }
-    if (Platform.OS === "android") {
-      setShowDatePicker(false);
-    }
-  };
+    return <View style={styles.tabContent}>{children}</View>;
+};
+RNTabPanel.propTypes = { children: PropTypes.node, value: PropTypes.number.isRequired, index: PropTypes.number.isRequired };
 
-  const onSave = async () => {
-    if (!accountId) return;
-    setSaving(true);
-    try {
-      const payload = {
-        ...form,
-        id: id || null,
-        type: "STUDENT",
-        accountId,
-        role: form.role ? { id: form.role.id, name: form.role.name } : null,
-      };
-      if (id) {
-        await apiService.updateStudentFull(payload);
-      } else {
-        await apiService.saveStudent(payload);
-      }
-      onSaved();
-    } catch (e) {
-    } finally {
-      setSaving(false);
-    }
-  };
 
-  if (loading) {
+const RNTabs = ({ value, onChange, tabs, tNamespace }) => {
+    const { t } = useTranslation([tNamespace]);
     return (
-      <View style={styles.center}>
-        <ActivityIndicator />
-      </View>
+        <View style={styles.tabBar}>
+            {tabs.map((tab, index) => (
+                <TouchableOpacity
+                    key={index}
+                    style={[styles.tab, value === index && styles.activeTab]}
+                    onPress={() => onChange(index)}
+                >
+                    <Text style={[styles.tabText, value === index && styles.activeTabText]}>
+                        {t(`${tNamespace}:tabs.${tab.labelKey}`)}
+                    </Text>
+                </TouchableOpacity>
+            ))}
+        </View>
     );
+};
+RNTabs.propTypes = {
+    value: PropTypes.number.isRequired,
+    onChange: PropTypes.func.isRequired,
+    tabs: PropTypes.array.isRequired,
+    tNamespace: PropTypes.string.isRequired,
+};
+
+
+// ====================================================================================
+// 3. Main Component Logic (EditStudent)
+// ====================================================================================
+
+const EditStudent = () => {
+  const navigate = useNavigate();
+  const { id: userId } = useParams();
+  const isEditMode = !!userId;
+  const { t } = useTranslation(['edit', 'common', 'student']); 
+
+  const [loader, setLoader] = useState(false);
+  const [roles, setRoles] = useState<Role[]>([]);
+  const [studentData, setStudentData] = useState<IStudentFormValues>(initialStudentState);
+  const user = useSelector((state: any) => state.user);
+  const [tabValue, setTabValue] = useState(0); 
+
+  const handleCancel = () => {
+    navigate('/masters/students');
   }
 
+  const handleTabChange = (newValue: number) => {
+    setTabValue(newValue);
+  };
+    
+  const fetchData = useCallback(async (endpoint: string, setter: (data: any[]) => void, typeFilter = '') => {
+    const accountId = userDetails.getAccountId();
+    if (!accountId) return;
+    let url = `${endpoint}/${accountId}`;
+    if (typeFilter) url += `?type=${typeFilter}`;
+
+    try {
+      const response = await api.post(url, { page: 0, size: 1000, sortBy: 'id', sortDir: 'asc', search: '' });
+      setter(response.data.content || []);
+    } catch (error) {
+      console.error(`Failed to fetch ${endpoint}:`, error);
+      toast.error(t('student:messages.fetchFailed'));
+    }
+  }, [t]);
+
+  const fetchStudentData = useCallback(
+    async (id: string) => {
+      setLoader(true);
+      try {
+        const response = await api.get(`api/users/getById?id=${id}`);
+        
+        const formatDateForInput = (val: string | Date | undefined | null): string => {
+          if (!val) return '';
+          try {
+              const dateValue = response.data.date_of_birth || response.data.dob;
+              const d = new Date(dateValue);
+              if (Number.isNaN(d.getTime())) return '';
+              const yyyy = d.getFullYear();
+              const mm = String(d.getMonth() + 1).padStart(2, '0');
+              const dd = String(d.getDate()).padStart(2, '0');
+              return `${yyyy}-${mm}-${dd}`;
+          } catch {
+              return ''; 
+          }
+        };
+
+        const fetchedData: IStudentFormValues = {
+          ...response.data,
+          classId: response.data.classId ? String(response.data.classId) : '',
+          divisionId: response.data.divisionId ? String(response.data.divisionId) : '',
+          rollNo: response.data.rollNo ? String(response.data.rollNo) : '',
+          schoolId: response.data.schoolId || '',
+          dob: formatDateForInput(response.data.dob), 
+          role: response.data.role
+            ? roles.find((r) => String(r.id) === String(response.data.role.id)) || {
+                id: response.data.role.id,
+                name: response.data.role.name
+              }
+            : null,
+          password: '' 
+        };
+        setStudentData(fetchedData);
+      } catch (error) {
+        console.error('Failed to fetch student data:', error);
+        toast.error(t('student:messages.fetchFailed'));
+      } finally {
+        setLoader(false);
+      }
+    },
+    [roles, t]
+  );
+
+  useEffect(() => {
+    fetchData('api/roles/getAll', setRoles);
+  }, [fetchData]);
+
+  useEffect(() => {
+    if (userId && roles.length > 0) {
+      fetchStudentData(userId);
+    } else if (!userId) {
+      setStudentData(initialStudentState);
+    }
+  }, [userId, roles, fetchStudentData]);
+
+
+  const StudentValidationSchema = Yup.object().shape({
+    email: Yup.string().email(t('student:validation.emailInvalid')).max(255).required(t('student:validation.emailRequired')),
+    password: isEditMode
+      ? Yup.string().max(255).notRequired()
+      : Yup.string().max(255).required(t('student:validation.passwordRequired')),
+    userName: Yup.string().max(255).required(t('student:validation.userNameRequired')),
+    firstName: Yup.string().max(255).required(t('student:validation.firstNameRequired')),
+    lastName: Yup.string().max(255).required(t('student:validation.lastNameRequired')),
+    mobile: Yup.string()
+      .matches(/^[0-9]+$/, t('student:validation.mobileDigitsOnly'))
+      .min(10, t('student:validation.mobileMin'))
+      .max(15, t('student:validation.mobileMax'))
+      .required(t('student:validation.mobileRequired')),
+    rollNo: Yup.string().required(t('student:validation.rollNoRequired')),
+    dob: Yup.date() 
+      .nullable()
+      .max(new Date(), t('student:validation.dobFuture'))
+      .required(t('student:validation.dobRequired')),
+    classId: Yup.string().required(t('student:validation.classRequired')),
+    divisionId: Yup.string().required(t('student:validation.divisionRequired')),
+    role: Yup.object().nullable().required(t('student:validation.roleRequired'))
+  });
+
+  const handleSubmit = async (values: IStudentFormValues, { setSubmitting }: FormikHelpers<IStudentFormValues>) => {
+    const userData = {
+      ...values,
+      id: userId || null,
+      type: 'STUDENT',
+      accountId: userDetails.getAccountId(),
+      status: 'active',
+      dob: values.dob || null, 
+      dateOfBirth: values.dob || null, 
+      role: values.role ? { id: values.role.id, name: values.role.name } : null
+    };
+
+    try {
+      const apiCall = userId ? api.put(`api/users/update`, userData) : api.post(`api/users/save`, userData);
+      await apiCall;
+
+      toast.success(t(userId ? 'student:messages.updateSuccess' : 'student:messages.createSuccess'), {
+        onClose: () => {
+          navigate('/masters/students');
+        }
+      });
+    } catch (error) {
+      const backendMessage = (error as any)?.response?.data?.message || (error as any)?.message || t('student:messages.saveError');
+      console.error('Failed to save student data:', error);
+      toast.error(backendMessage);
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+
+  const Title = userId ? t('student:title.edit') : t('student:title.add');
+
+  if (loader) {
+    return <ReusableLoader message={t('student:messages.loading')} />;
+  }
+
+  const standardFields: IFormField[] = [
+      { name: 'userName', labelKey: 'userName', type: 'text', widthMultiplier: 0.5 },
+      { 
+          name: 'password', 
+          labelKey: 'password', 
+          type: 'password', 
+          widthMultiplier: 0.5,
+          disabled: isEditMode 
+      },
+      { name: 'firstName', labelKey: 'firstName', type: 'text', widthMultiplier: 0.5 },
+      { name: 'lastName', labelKey: 'lastName', type: 'text', widthMultiplier: 0.5 },
+      { name: 'mobile', labelKey: 'mobile', type: 'tel', widthMultiplier: 0.5 },
+      { name: 'email', labelKey: 'email', type: 'email', widthMultiplier: 0.5 },
+      { 
+          name: 'dob', 
+          labelKey: 'dateOfBirth', 
+          type: 'date', 
+          widthMultiplier: 0.5, 
+      },
+      { name: 'rollNo', labelKey: 'rollNo', type: 'number', widthMultiplier: 0.5 },
+      { 
+          name: 'address', 
+          labelKey: 'address', 
+          type: 'textarea', 
+          widthMultiplier: 1.0, 
+          rows: 3, 
+      },
+      {
+          name: 'role',
+          labelKey: 'role',
+          type: 'select' as const, 
+          widthMultiplier: 1.0,
+          options: roles,
+      }
+  ];
+
+  const renderCustomFields = (formikProps: FormikProps<IStudentFormValues>) => (
+    <View style={styles.customFieldContainer} key="scd-selector-container">
+        {/* SCDSelector is assumed to be defined in 'ui-component/SCDSelector' */}
+        <SCDSelector
+            formik={{
+                values: formikProps.values,
+                setFieldValue: formikProps.setFieldValue,
+                touched: formikProps.touched,
+                errors: formikProps.errors,
+                schoolLabel: t('student:fields.school'),
+                classLabel: t('student:fields.class'),
+                divisionLabel: t('student:fields.division')
+            }}
+        />
+    </View>
+  );
+
+  const tabs = [
+    { labelKey: 'details', index: 0 },
+    { labelKey: 'documents', index: 1 },
+  ];
+
   return (
-    <ScrollView
-      style={styles.container}
-      contentContainerStyle={{ padding: 16 }}
-    >
-      <Text variant="titleLarge" style={{ marginBottom: 12 }}>
-        {id ? "Edit Student" : "Add Student"}
-      </Text>
+    <View style={styles.screenContainer}>
+      <MainCard title={Title}> 
+        <Toaster position="top-right" reverseOrder={false} />
+        
+        <RNTabs 
+            value={tabValue} 
+            onChange={handleTabChange} 
+            tabs={tabs} 
+            tNamespace="student" 
+        />
 
-      <TextInput
-        label="User Name"
-        value={form.userName}
-        onChangeText={(v) => setForm((f: any) => ({ ...f, userName: v }))}
-        mode="outlined"
-        style={styles.input}
-      />
-      {!id && (
-        <TextInput
-          label="Password"
-          value={form.password}
-          onChangeText={(v) => setForm((f: any) => ({ ...f, password: v }))}
-          mode="outlined"
-          style={styles.input}
-        />
-      )}
-      <TextInput
-        label="First Name"
-        value={form.firstName}
-        onChangeText={(v) => setForm((f: any) => ({ ...f, firstName: v }))}
-        mode="outlined"
-        style={styles.input}
-      />
-      <TextInput
-        label="Last Name"
-        value={form.lastName}
-        onChangeText={(v) => setForm((f: any) => ({ ...f, lastName: v }))}
-        mode="outlined"
-        style={styles.input}
-      />
-      <TextInput
-        label="Mobile"
-        value={form.mobile}
-        onChangeText={(v) => setForm((f: any) => ({ ...f, mobile: v }))}
-        mode="outlined"
-        style={styles.input}
-        keyboardType="phone-pad"
-      />
-      {hasError("mobile") && (
-        <HelperText type="error">Invalid mobile</HelperText>
-      )}
-      <TextInput
-        label="Email"
-        value={form.email}
-        onChangeText={(v) => setForm((f: any) => ({ ...f, email: v }))}
-        mode="outlined"
-        style={styles.input}
-        keyboardType="email-address"
-      />
-      {hasError("email") && <HelperText type="error">Invalid email</HelperText>}
-      <TextInput
-        label="Address"
-        value={form.address}
-        onChangeText={(v) => setForm((f: any) => ({ ...f, address: v }))}
-        mode="outlined"
-        style={styles.input}
-        multiline
-      />
-      <TextInput
-        label="Roll No"
-        value={form.rollNo}
-        onChangeText={(v) => setForm((f: any) => ({ ...f, rollNo: v }))}
-        mode="outlined"
-        style={styles.input}
-      />
-      {hasError("rollNo") && (
-        <HelperText type="error">Roll No is required</HelperText>
-      )}
-      {/* Date of Birth - opens native date picker when focused/pressed */}
-      <View>
-        <TextInput
-          label="Date of Birth"
-          value={form.dob}
-          onFocus={() => setShowDatePicker(true)}
-          onPressIn={() => setShowDatePicker(true)}
-          mode="outlined"
-          style={styles.input}
-          right={undefined}
-        />
-        {showDatePicker && (
-          <DateTimePicker
-            testID="dateTimePicker"
-            value={form.dob ? new Date(form.dob) : new Date()}
-            mode="date"
-            display="default"
-            maximumDate={new Date()}
-            onChange={onChangeDate}
+        <RNTabPanel value={tabValue} index={0}>
+          <ReusableForm<IStudentFormValues>
+            initialValues={studentData}
+            validationSchema={StudentValidationSchema}
+            onSubmit={handleSubmit}
+            fields={standardFields}
+            isEditMode={isEditMode}
+            cancelAction={handleCancel}
+            tNamespace="student"
+            renderCustomContent={renderCustomFields} 
           />
-        )}
-      </View>
+        </RNTabPanel>
+        
+        <RNTabPanel value={tabValue} index={1}>
+          {userId ? (
+            <UserDocumentManager userId={userId} userType="STUDENT" />
+          ) : (
+             <Text style={styles.infoText}>{t('student:messages.saveFirstForDocuments')}</Text>
+          )}
+        </RNTabPanel>
 
-      <List.Subheader>School / Class / Division</List.Subheader>
-      <List.Section>
-        <List.Accordion
-          title={
-            schools.find((s) => String(s.id) === String(form.schoolId))?.name ||
-            "Select School"
-          }
-        >
-          {schools.map((s) => (
-            <List.Item
-              key={s.id}
-              title={s.name}
-              onPress={() =>
-                setForm((f: any) => ({ ...f, schoolId: String(s.id) }))
-              }
-            />
-          ))}
-        </List.Accordion>
-        <List.Accordion
-          title={
-            classes.find((c) => String(c.id) === String(form.classId))?.name ||
-            "Select Class"
-          }
-        >
-          {classes.map((c) => (
-            <List.Item
-              key={c.id}
-              title={c.name}
-              onPress={() =>
-                setForm((f: any) => ({ ...f, classId: String(c.id) }))
-              }
-            />
-          ))}
-        </List.Accordion>
-        <List.Accordion
-          title={
-            divisions.find((d) => String(d.id) === String(form.divisionId))
-              ?.name || "Select Division"
-          }
-        >
-          {divisions.map((d) => (
-            <List.Item
-              key={d.id}
-              title={d.name}
-              onPress={() =>
-                setForm((f: any) => ({ ...f, divisionId: String(d.id) }))
-              }
-            />
-          ))}
-        </List.Accordion>
-      </List.Section>
-
-      <List.Subheader>Role</List.Subheader>
-      <View>
-        {/* Use a Menu anchored to a button so user sees available roles as a list */}
-        <Menu
-          visible={roleMenuVisible}
-          onDismiss={() => setRoleMenuVisible(false)}
-          anchor={
-            <Button
-              mode="outlined"
-              onPress={() => setRoleMenuVisible(true)}
-              style={styles.input}
-            >
-              {form.role?.name || "Select Role"}
-            </Button>
-          }
-        >
-          {roles.map((r) => (
-            <Menu.Item
-              key={r.id}
-              onPress={() => {
-                setForm((f: any) => ({
-                  ...f,
-                  role: { id: String(r.id), name: r.name },
-                }));
-                setRoleMenuVisible(false);
-              }}
-              title={r.name}
-            />
-          ))}
-        </Menu>
-      </View>
-
-      <View style={styles.actions}>
-        <Button mode="text" onPress={onClose}>
-          Cancel
-        </Button>
-        <Button
-          mode="contained"
-          loading={saving}
-          disabled={saving}
-          onPress={onSave}
-        >
-          Save
-        </Button>
-      </View>
-    </ScrollView>
+      </MainCard>
+    </View>
   );
 };
 
+
+// ====================================================================================
+// 4. Styles
+// ====================================================================================
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-  },
-  center: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  input: {
-    marginBottom: 10,
-  },
-  actions: {
-    flexDirection: "row",
-    justifyContent: "flex-end",
-    gap: 8,
-    marginTop: 8,
-  },
+    screenContainer: {
+        flex: 1,
+    },
+    tabBar: {
+        flexDirection: 'row',
+        borderBottomWidth: 1,
+        borderColor: colors.divider,
+        backgroundColor: colors.card,
+        paddingHorizontal: 16,
+    },
+    tab: {
+        paddingVertical: 12,
+        paddingHorizontal: 16,
+        marginRight: 10,
+        borderBottomWidth: 2,
+        borderColor: 'transparent',
+    },
+    activeTab: {
+        borderColor: colors.primary,
+    },
+    tabText: {
+        fontSize: 16,
+        fontWeight: '500',
+        color: colors.text,
+    },
+    activeTabText: {
+        color: colors.primary,
+        fontWeight: 'bold',
+    },
+    tabContent: {
+        flex: 1,
+        backgroundColor: colors.background,
+    },
+    infoText: {
+        padding: 16,
+        fontSize: 16,
+        color: colors.text,
+    },
+    customFieldContainer: {
+        width: '100%', 
+        paddingHorizontal: 8,
+        marginBottom: 16,
+    }
 });
 
+// Since the error message suggests a component import error within AddEditStudent (which refers to this file), 
+// ensure the default export matches the intended usage.
 export default EditStudent;

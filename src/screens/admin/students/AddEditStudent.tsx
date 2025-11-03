@@ -1,41 +1,11 @@
-import React from "react";
-import { StyleSheet } from "react-native";
-import { Button } from "react-native-paper";
+import React, { useState, useEffect } from "react";
+// no local StyleSheet used
 import { useNavigation, useRoute } from "@react-navigation/native"; // <--- NEW IMPORTS
-import {
-  ReusableForm,
-  FormField,
-} from "../../../components/common/ReusableForm";
+import ReusableForm, { IFormField as FormField } from "../../../components/common/ReusableForm";
+import * as Yup from 'yup';
+import api, { userDetails } from '../../../api';
 
-// Define the full set of fields for the form based on user's payload
-const studentFormFields: FormField[] = [
-  // Authentication/Login details
-  { name: "userName", label: "User Name", type: "text", required: true },
-  { name: "password", label: "Password", type: "password", required: true },
-  // Personal details
-  { name: "firstName", label: "First Name", type: "text", required: true },
-  { name: "lastName", label: "Last Name", type: "text", required: true },
-  { name: "email", label: "Email", type: "email", required: true },
-  { name: "mobile", label: "Mobile", type: "number", required: true },
-  { name: "address", label: "Address", type: "text", required: false },
-  // NOTE: Using a date field so ReusableForm will render a native date picker
-  { name: "dob", label: "Date of Birth", type: "date", required: true },
-  // Role selection - fetch from API (normalized by ReusableForm)
-  // Use placeholder {accountId} so ReusableForm can replace it with current account id and POST for paging
-  {
-    name: "role",
-    label: "Role",
-    type: "select",
-    optionsUrl: "/api/roles/getAll/{accountId}",
-    optionsMethod: "post",
-    required: true,
-  },
-  // School/Class details (Assuming text input for now, should be a select/picker in a real app)
-  { name: "rollNo", label: "Roll No", type: "number", required: true },
-  // { name: 'classId', label: 'Class ID', type: 'number', required: true },
-  // { name: 'divisionId', label: 'Division ID', type: 'number', required: true },
-  // { name: 'schoolId', label: 'School ID', type: 'number', required: true },
-];
+// fields defined inside component
 
 // Transformation function to match the API payload
 const transformStudentData = (data: any, isUpdate: boolean) => {
@@ -75,35 +45,86 @@ export const AddEditStudent: React.FC = () => {
   const navigation = useNavigation();
   const route = useRoute();
   const { id } = (route.params as { id?: string }) || {};
+  const isEditMode = !!id;
+  const [roles, setRoles] = useState<any[]>([]);
 
-  const handleCancel = () => {
-    navigation.goBack();
-  };
+  useEffect(() => {
+    const acc = userDetails.getAccountId();
+    if (!acc) return;
+    const url = `/api/roles/getAll/${acc}`;
+    (async () => {
+      try {
+        const resp = await api.post(url, { page: 0, size: 1000, sortBy: 'id', sortDir: 'asc', search: '' });
+        setRoles(resp.data?.content || []);
+      } catch (err) {
+        console.error('Failed to fetch roles', err);
+      }
+    })();
+  }, []);
 
   // Custom transformation function for ReusableForm
   const handleTransform = (data: any) => {
     return transformStudentData(data, !!id);
   };
+  // Define fields for ReusableForm (use labelKey as i18n key), include fetched roles
+  const studentFormFields: FormField[] = [
+    { name: 'userName', labelKey: 'userName', type: 'text', widthMultiplier: 0.5 },
+    { name: 'password', labelKey: 'password', type: 'password', widthMultiplier: 0.5, disabled: isEditMode },
+    { name: 'firstName', labelKey: 'firstName', type: 'text', widthMultiplier: 0.5 },
+    { name: 'lastName', labelKey: 'lastName', type: 'text', widthMultiplier: 0.5 },
+    { name: 'mobile', labelKey: 'mobile', type: 'tel', widthMultiplier: 0.5 },
+    { name: 'email', labelKey: 'email', type: 'email', widthMultiplier: 0.5 },
+    { name: 'dob', labelKey: 'dateOfBirth', type: 'date', widthMultiplier: 0.5 },
+    { name: 'rollNo', labelKey: 'rollNo', type: 'number', widthMultiplier: 0.5 },
+  { name: 'address', labelKey: 'address', type: 'textarea', widthMultiplier: 1.0, multiline: true, inputProps: { numberOfLines: 3 } },
+    { name: 'role', labelKey: 'role', type: 'select', widthMultiplier: 1.0, options: roles },
+  ];
+
+  // Build initialValues object for ReusableForm based on fields
+  const initialValues: any = {};
+  studentFormFields.forEach((f) => {
+    if (f.type === 'select') initialValues[f.name] = null;
+    else initialValues[f.name] = '';
+  });
+
+  const validationSchema = Yup.object().shape({
+    userName: Yup.string().required('User Name is required'),
+    firstName: Yup.string().required('First Name is required'),
+    lastName: Yup.string().required('Last Name is required'),
+    email: Yup.string().email('Invalid email').required('Email is required'),
+    mobile: Yup.string().required('Mobile is required'),
+    rollNo: Yup.string().required('Roll No is required'),
+    dob: Yup.string().required('Date of Birth is required'),
+    role: Yup.mixed().required('Role is required'),
+  });
+
+  const onSubmit = async (values: any, formikHelpers: any) => {
+    const payload = handleTransform(values);
+    try {
+      if (isEditMode) {
+        await api.put('/api/users/update', payload);
+      } else {
+        await api.post('/api/users/save', payload);
+      }
+      navigation.navigate('StudentList' as never);
+    } catch (err) {
+      console.error('Save failed', err);
+    } finally {
+      formikHelpers.setSubmitting(false);
+    }
+  };
 
   return (
     <ReusableForm
-      entityName="Student"
-      fields={studentFormFields}
-      fetchUrl="/api/users/getById"
-      saveUrl="/api/users/save"
-      updateUrl="/api/users/update"
-      onSuccessUrl="StudentList"
-      transformForSubmit={handleTransform} // Pass transformation function ,
-      showSCDSelector={true}
-      showCancelButton={true}
-      // Pass the custom Cancel Button to the ReusableForm component
+      initialValues={initialValues}
+      validationSchema={validationSchema}
+      onSubmit={onSubmit}
+      fields={studentFormFields as FormField[]}
+      isEditMode={isEditMode}
+      cancelAction={() => navigation.goBack()}
+      tNamespace="student"
     />
   );
 };
 
-const styles = StyleSheet.create({
-  cancelButton: {
-    marginTop: 10,
-    marginBottom: 20,
-  },
-});
+// no local styles needed
